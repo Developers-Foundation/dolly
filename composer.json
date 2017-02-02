@@ -1,0 +1,15 @@
+{
+  "name": "Dolly Children Foundation",
+  "description": "NPO Website",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Michael Park",
+      "email": "Michael@developersfoundation.ca"
+    }
+  ],
+  "require": {
+    "sendgrid/sendgrid": "4.0.4"
+  }
+}

@@ -1,0 +1,72 @@
+
+.navbar-default{
+    background-color: white;
+    border-color: white;
+}
+.donatebutton{
+    color: white;
+    background-color: #f5a623;
+}
+#Header .container{
+    background-image: url(../img/main/pic1.jpg);
+}
+
+#Header h1{
+    color: #f5a623;
+    font-size: 60px;
+}
+
+#About .container{
+    background-color: #f5a623;
+    padding: 5% 5% 5% 5%;
+}
+
+#About h1{
+    color: #ffffff;
+    font-size: 60px;
+}
+
+#About hr{
+    align-content: left;
+    display: inline-block;
+    width: 25%;
+    border-width: 5px;
+    border-color: #ffffff;
+}
+
+#About p{
+    color: #ffffff;
+    font-size: 24px;
+}
+
+#Mission .container{
+    height: 500px;
+    background-size: cover;
+    background-image: url(../img/main/pic3.jpg);
+}
+
+
+.section-bg-img{
+    position: absolute;
+}
+
+#Gallery .container{
+    background-color: #f4c153;
+}
+
+#donate .container{
+
+}
+
+#contact>.container>.row{
+    background-color: #ffce7a;
+}
+
+.footercolor{
+    color: white;
+}
+
+footer{
+    background-color: #f5a623;
+    font-family: Futura;
+}
