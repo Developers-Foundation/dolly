@@ -98,6 +98,16 @@ footer{
  #journey button{
      margin-bottom: 50px;
  }
+#whatwedo i{
+    border-radius: 25%;
+    color: #757573;
+    padding:10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+}
+#whatwedo i:hover{
+    background-color: #f5a623;
+    color: #ffffff;
+}
 
  .learnMore{
      width: 168px;
@@ -106,10 +116,43 @@ footer{
      background-color: #ffffff;
      border: solid 3px #f5a623;
      margin-bottom: 50px;
+     margin-top: 50px;
  }
 .learnMore a{
     font-family: Calibri;
     font-size: 24px;
     font-weight: bold;
     color: #f5a623;
+}
+.vline{
+    height: 275px;
+    border-left: solid 1px #979797;
+}
+
+#emailus{
+    background-image: url("../img/main/email.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#emailus p{
+    font-size: 24px;
+    font-weight: 500;
+    color: #4d4c4d;
+    padding: 20px;
+}
+
+#emailus a{
+    font-size: 24px;
+    font-weight: 800;
+    font-stretch: condensed;
+    color: #ffffff;
+}
+.email{
+    width: 168px;
+    height: 55px;
+    border-radius: 8px;
+    background-color: #eb4156;
+    border: solid 3px #eb4156;
+    margin: 0px 0px 20px 0px;
 }

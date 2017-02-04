@@ -2,16 +2,16 @@
     <div class="container">
 
         <div class="row text-center footercolor" style="margin-bottom: 50px; margin-top: 25px">
-            <div class="col-md-2 col-md-offset-3 ">
+            <div class="col-md-4">
                 <h4><strong>Learn More</strong></h4>
                 <a class="footercolor" href="about.php">About</a>
             </div>
-            <div class="col-md-2 ">
+            <div class="col-md-4">
                 <h4><strong>Get Involved</strong></h4>
                 <a class="footercolor" href="donate.php">Donate</a>
 
             </div>
-            <div class="col-md-2 ">
+            <div class="col-md-4">
                 <h4><strong>Stay Connected</strong></h4>
                 <a class="footercolor" href="https://www.facebook.com/DollyChildrenFoundation/" target="_blank">Facebook</a>
             </div>
