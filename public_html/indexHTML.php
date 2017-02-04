@@ -1,5 +1,4 @@
 <div id="main">
-    <img src="assets/img/main/main.jpg">
 </div>
 <div id="journey">
     <div class="row">
@@ -9,7 +8,7 @@
                 <hr>
                 <h1>Join the Journey</h1>
                 <button class="btn donate">
-                    Donate
+                    <a href="donate.php">Donate</a>
                 </button>
             </div>
         </div>
@@ -46,8 +45,8 @@
             </p>
         </div>
         <div class="col-md-12 text-center">
-            <button class="btn btn-default">
-                Learn More
+            <button class="btn learnMore">
+                <a href="about.php">Learn More</a>
             </button>
         </div>
     </div>

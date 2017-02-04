@@ -11,78 +11,28 @@ h1, h2, h3, h4, h5, h6, p{
     border-color: white;
 }
 .donatebutton{
-    color: white;
+    width: 117px;
+    height: 40px;
+    border-radius: 15px;
     background-color: #f5a623;
-}
-#Header .container{
-    background-image: url(../img/main/pic1.jpg);
-}
-
-#Header h1{
-    color: #f5a623;
-    font-size: 60px;
-}
-
-#About .container{
-    background-color: #f5a623;
-    padding: 5% 5% 5% 5%;
-}
-
-#About h1{
+    font-family: Calibri;
+    font-size: 20px;
+    font-weight: normal;
     color: #ffffff;
-    font-size: 60px;
 }
-
-#About hr{
-    align-content: left;
-    display: inline-block;
-    width: 25%;
-    border-width: 5px;
-    border-color: #ffffff;
-}
-
-#About p{
-    color: #ffffff;
-    font-size: 24px;
-}
-
-#Mission .container{
-    height: 500px;
-    background-size: cover;
-    background-image: url(../img/main/pic3.jpg);
-}
-
-
-.section-bg-img{
-    position: absolute;
-}
-
-#Gallery .container{
-    background-color: #f4c153;
-}
-
-#donate .container{
-
-}
-
-#contact>.container>.row{
-    background-color: #ffce7a;
-}
-
-.footercolor{
+.footercolor {
     color: white;
 }
-
 footer{
     background-color: #f5a623;
 }
- #main img{
-     width: 100%;
-     overflow: hidden;
-     background-position: center;
-     /* Make the background image cover the area of the <div>, and clip the excess */
-     background-size: cover;
- }
+#main{
+    height: 648px;
+    background-image: url("../img/main/main.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 #whatwedo h1{
     font-size: 48px;
@@ -135,6 +85,8 @@ footer{
      height: 55px;
      border-radius: 8px;
      background-color: #f5a623;
+ }
+ #journey a{
      font-size: 24px;
      font-weight: 800;
      font-stretch: condensed;
@@ -143,3 +95,18 @@ footer{
  #journey button{
      margin-bottom: 50px;
  }
+
+ .learnMore{
+     width: 168px;
+     height: 55px;
+     border-radius: 8px;
+     background-color: #ffffff;
+     border: solid 3px #f5a623;
+     margin-bottom: 50px;
+ }
+.learnMore a{
+    font-family: Calibri;
+    font-size: 24px;
+    font-weight: bold;
+    color: #f5a623;
+}

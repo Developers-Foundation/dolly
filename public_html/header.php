@@ -60,7 +60,7 @@
                 <li><a href="#About" class="page-scroll">About Us</a></li>
                 <li><a href="#Contact" class="page-scroll">Contact Us</a></li>
                 <li>
-                    <a href="#Donate" class="page-scroll"><button class="btn btn-default donatebutton">Donate</button></a>
+                    <a href="#Donate" class="page-scroll"><button class="btn donatebutton">Donate</button></a>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->
