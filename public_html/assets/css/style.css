@@ -1,5 +1,5 @@
 h1, h2, h3, h4, h5, h6, p{
-    font-family: Futura;
+    font-family: Futura, sans-serif;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6, p{
     height: 40px;
     border-radius: 15px;
     background-color: #f5a623;
-    font-family: Calibri;
+    font-family: Calibri, sans-serif;
     font-size: 20px;
     font-weight: normal;
     color: #ffffff;
@@ -54,8 +54,8 @@ footer{
      text-shadow: 1px 1px #aaa;
  }
  #journey hr{
-     margin-top: 0px;
-     margin-bottom: 0px;
+     margin-top: 0;
+     margin-bottom: 0;
      width: 190px;
      border: solid 1px #ffffff;
      text-shadow: 1px 1px #aaa;
@@ -112,7 +112,7 @@ footer{
      margin-top: 50px;
  }
 .learnMore a{
-    font-family: Calibri;
+    font-family: Calibri, sans-serif;
     font-size: 24px;
     font-weight: bold;
     color: #f5a623;
@@ -147,5 +147,122 @@ footer{
     border-radius: 8px;
     background-color: #179e80;
     border: solid 3px #179e80;
-    margin: 0px 0px 20px 0px;
+    margin: 0 0 20px 0;
+}
+
+/* ============================================== CONTACT US ================================================= */
+
+/* IMAGE */
+.contactBG {
+    position: relative;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Image Settings */
+    background-image: url("../img/main/contact-us.jpg");
+    min-height: 450px;
+}
+
+/* TEXT OVER IMAGE */
+.contactBG .caption {
+    position: absolute;
+    left: 0;
+    top: 70%;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+.contactBG h1 {
+    font-family: Futura, sans-serif;
+    font-size: 55px;
+    font-weight: 900;
+    font-style: normal;
+    line-height: normal;
+    color: #ffffff;
+    letter-spacing: -2px;
+
+    /* Stretch Text Vertically */
+    display:inline-block;
+    -webkit-transform:scale(1,1.2); /* Safari and Chrome */
+    -moz-transform:scale(1,1.2);    /* Firefox */
+    -ms-transform:scale(1,1.2);     /* IE 9 */
+    -o-transform:scale(1,1.2);      /* Opera */
+    transform:scale(1,1.2);         /* W3C */
+}
+
+.contactBG .captionRectangle {
+    width: 118px;
+    height: 6px;
+    background-color: #ffffff;
+    margin: -9px auto 0 auto;
+}
+
+/* CONTACT FORM SECTION */
+
+.contactForm .form-group {
+    margin: 0 15px 0 15px;
+}
+
+.contactForm p {
+    text-align: center;
+    font-size: 18px;
+    color: #757573;
+    padding: 53px 0 20px 0;
+}
+
+.contactForm input, .contactForm textarea {
+    color: #757573;
+    width: 100%;
+    height: 50px;
+    margin: 15px auto 15px auto;
+    float: none;
+    font-family: Futura, sans-serif;
+    border-radius: 10px;
+    border: solid 1px #179e80;
+
+    box-shadow: none;
+    -webkit-box-shadow: none;
+
+}
+
+.contactForm textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.contactForm button {
+    margin: 25px 0 40px 0;
+    width: 135px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: #179e80;
+    border: none;
+    font-family: Futura, sans-serif;
+    font-size: 18px;
+    color: white;
+    font-weight: 100!important;
+}
+
+/* DISABLE BLUE INPUT FOCUS COLOR */
+.form-control:focus {
+    border-color: #179e80;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/* PLACEHOLDER TEXT COLOR */
+.contactForm ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #757573;
+}
+.contactForm ::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #757573;
+}
+.contactForm ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #757573;
+}
+.contactForm :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    #757573;
 }
