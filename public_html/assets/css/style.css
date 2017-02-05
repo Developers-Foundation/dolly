@@ -5,6 +5,12 @@ h1, h2, h3, h4, h5, h6, p{
     line-height: normal;
     letter-spacing: normal;
 }
+.navsetting{
+    background-color: white;
+    border-color: white;
+    position: fixed;
+    width: 100%;
+}
 
 .navbar-default{
     background-color: white;

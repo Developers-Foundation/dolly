@@ -41,7 +41,7 @@
 
 <body>
 <nav id="navbar" class="navbar navbar-default">
-    <div class="container">
+    <div class="container navsetting">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -51,14 +51,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <img class="img-responsive" src="assets/img/main/Logo.jpg">
+            <img style="width: 20%" class="img-responsive" src="assets/img/main/logo.png">
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#About" class="page-scroll">About Us</a></li>
-                <li><a href="#Contact" class="page-scroll">Contact Us</a></li>
+                <li>
+                    <a href="#About" class="page-scroll">About Us</a>
+                </li>
+                <li>
+                    <a href="#Contact" class="page-scroll">Contact Us</a>
+                </li>
                 <li>
                     <a href="#Donate" class="page-scroll"><button class="btn donatebutton">Donate</button></a>
                 </li>
