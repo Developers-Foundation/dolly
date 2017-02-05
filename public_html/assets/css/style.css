@@ -26,13 +26,6 @@ h1, h2, h3, h4, h5, h6, p{
 footer{
     background-color: #f5a623;
 }
-#main{
-    height: 648px;
-    background-image: url("../img/main/main.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
 #whatwedo h1{
     font-size: 48px;
@@ -152,7 +145,7 @@ footer{
     width: 168px;
     height: 55px;
     border-radius: 8px;
-    background-color: #eb4156;
-    border: solid 3px #eb4156;
+    background-color: #179e80;
+    border: solid 3px #179e80;
     margin: 0px 0px 20px 0px;
 }

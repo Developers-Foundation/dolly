@@ -1,5 +1,3 @@
-<div id="main">
-</div>
 <div id="journey">
     <div class="row">
         <div class="col-md-offset-5 col-md-7 text-center">
