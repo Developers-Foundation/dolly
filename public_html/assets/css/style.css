@@ -289,17 +289,89 @@ footer{
 }
 
 .ourMission {
-    background-color: #f5a623;
+    background-color: #F3A536;
     text-align: center;
-    padding: 50px 0 50px 0;
+    padding: 95px 0 110px 0;
 }
 
 .ourMission h1 {
     font-size: 43px;
+    letter-spacing: normal;
 }
 
 .ourMission p {
     color: #fff;
     font-size: 20px;
     font-weight: 100;
+    margin: 15px 18%;
+}
+
+/* FOUNDER SECTION */
+
+/* On Tablets/Desktop, do this */
+@media only screen and (min-width: 768px) {
+    .founderTextDiv {
+        width: 60%;
+    }
+    .founderImgDiv {
+        width: 40%;
+    }
+}
+
+.aboutFounder {
+    width: 100%;
+    padding: 0;
+}
+
+.aboutFounder h1 {
+    color: #4a4a4a;
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 53px;
+    padding-top: 14%;
+}
+
+.founderTextDiv {
+    text-align: center;
+}
+
+.founderName {
+    color: #179e80;
+    padding: 0;
+    letter-spacing: -2px;
+}
+
+.founderNameRectangle {
+    width: 118px;
+    height: 6px;
+    background-color: #9B9B9B;
+    box-shadow: 0 2px 7px #9B9B9B;
+    margin: 19px auto 0 auto;
+}
+
+.founderText {
+    padding: 60px 100px;
+    font-weight: 900;
+    font-size: 15px;
+    color: #757573;
+}
+
+/* MORE INFO ICONS */
+.moreInfoIcons {
+    background-color: #e9e9e9;
+    text-align: center;
+    width: 100%;
+    padding: 60px 0 50px 0;
+}
+
+.moreInfoIcons img {
+    max-width: 220px;
+    padding-top: 40px;
+}
+
+.moreInfoIcons p {
+    color: #757573;
+    padding: 30px 50px;
+    font-size: 16px;
+    font-weight: 800;
 }

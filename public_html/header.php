@@ -32,8 +32,6 @@
 <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons"/>
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700"/>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
-<link href="assets/fonts/futura/futura.css" rel="stylesheet" type="text/css"/>
-
 
     <!-- CSS Files -->
 <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>

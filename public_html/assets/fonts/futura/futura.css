@@ -27,20 +27,7 @@
 }
 
 @font-face {
-	font-family: 'FuturaExtended';
-	src: url('FuturaExtended.eot');
-	src: local('FuturaExtended'),
-		url('FuturaExtended.eot?#iefix') format('embedded-opentype'),
-		url('FuturaExtended.woff2') format('woff2'),
-		url('FuturaExtended.woff') format('woff'),
-		url('FuturaExtended.ttf') format('truetype'),
-		url('FuturaExtended.svg#FuturaExtended') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Futura';
+	font-family: 'Futura Condensed';
 	src: url('Futura-CondensedExtraBold.eot');
 	src: local('Futura Condensed ExtraBold'), local('Futura-CondensedExtraBold'),
 		url('Futura-CondensedExtraBold.eot?#iefix') format('embedded-opentype'),
@@ -65,15 +52,3 @@
 	font-style: normal;
 }
 
-@font-face {
-	font-family: 'Futura (Light)';
-	src: url('FuturaLight.eot');
-	src: local('Futura (Light)'), local('FuturaLight'),
-		url('FuturaLight.eot?#iefix') format('embedded-opentype'),
-		url('FuturaLight.woff2') format('woff2'),
-		url('FuturaLight.woff') format('woff'),
-		url('FuturaLight.ttf') format('truetype'),
-		url('FuturaLight.svg#FuturaLight') format('svg');
-	font-weight: 300;
-	font-style: normal;
-}
