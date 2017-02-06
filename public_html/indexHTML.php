@@ -24,7 +24,7 @@
             </p>
         </div>
         <div class="col-md-2 vline">
-            <img src="assets/img/icons/kids_grey.png">
+            <img src="assets/img/icons/KIDS_grey.png">
             <p>
                 Sponsorship Programs for Pupils from Under-Served Families
             </p>
