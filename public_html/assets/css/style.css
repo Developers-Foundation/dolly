@@ -5,20 +5,37 @@ h1, h2, h3, h4, h5, h6, p{
     line-height: normal;
     letter-spacing: normal;
 }
-.navsetting{
+.mobilesize{
+    background-color: white;
+    border-color: white;
+    height: 200px;
+}
+.container-set{
+    height:80px;
+}
+.container-set > li{
+    margin: 15px;
+}
+.navbar-default{
     background-color: white;
     border-color: white;
     position: fixed;
     width: 100%;
 }
-
-.navbar-default{
-    background-color: white;
-    border-color: white;
+.navbar-brand{
+    float: left;
+    height: 80px;
+    padding:0px;
+}
+.navbar-brand > img{
+    height: 100%;
+    width:auto;
+    display: block;
+    padding: 10px;
 }
 .donatebutton{
-    width: 117px;
-    height: 40px;
+    width: 120px;
+    height: 50px;
     border-radius: 15px;
     background-color: #f5a623;
     font-family: Calibri;

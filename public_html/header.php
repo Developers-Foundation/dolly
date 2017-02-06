@@ -40,8 +40,8 @@
 </head>
 
 <body>
-<nav id="navbar" class="navbar navbar-default">
-    <div class="container navsetting">
+<nav id="navbar" class="navbar navbar-fixed-top navbar-default">
+    <div class="container container-set">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -51,20 +51,21 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <img style="width: 20%" class="img-responsive" src="assets/img/main/logo.png">
+            <a href="index.php" class="navbar-brand navbar-left"><img src="assets/img/main/logo.png"></a>
+
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
+        <div class="collapse navbar-collapse mobilesize" id="navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right container-set">
                 <li>
-                    <a href="#About" class="page-scroll">About Us</a>
+                    <a href="about.php" class="page-scroll">About Us</a>
                 </li>
                 <li>
-                    <a href="#Contact" class="page-scroll">Contact Us</a>
+                    <a href="contact.php" class="page-scroll">Contact Us</a>
                 </li>
                 <li>
-                    <a href="#Donate" class="page-scroll"><button class="btn donatebutton">Donate</button></a>
+                    <a href="donate.php" class="page-scroll" style="padding: 0;"><button class="btn donatebutton">Donate</button></a>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->
