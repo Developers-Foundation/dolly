@@ -35,7 +35,7 @@
     <div class="moreInfoIcons container">
         <div class="row">
             <div class="col-md-4">
-                <img src="assets/img/icons/book.png" alt="icon1" width="100%"/>
+                <img src="assets/img/icons/book_grey.png" alt="icon1" width="100%"/>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor arcu, sodales eu lacus vel,
                     pulvinar dapibus odio. Aliquam aliquet consequat rutrum. Lorem ipsum dolor sit amet, consectetur
