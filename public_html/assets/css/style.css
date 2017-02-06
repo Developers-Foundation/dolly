@@ -181,6 +181,7 @@ footer{
 }
 
 /* TEXT OVER IMAGE */
+.donateBG .caption,
 .contactusBG .caption,
 .aboutusBG .caption {
     position: absolute;
@@ -191,6 +192,7 @@ footer{
     text-align: center;
 }
 
+.donateHTML h1,
 .contactus h1,
 .aboutus h1 {
     font-family: Futura, sans-serif;
@@ -210,6 +212,7 @@ footer{
     transform:scale(1,1.2);         /* W3C */
 }
 
+.donateHTML .captionRectangle,
 .contactusBG .captionRectangle,
 .aboutusBG .captionRectangle {
     width: 118px;
@@ -387,4 +390,69 @@ footer{
     padding: 30px 50px;
     font-size: 16px;
     font-weight: 800;
+}
+
+/* ============================================== Donate ================================================= */
+
+.donateBG{
+    position: relative;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Image Settings */
+    background-image: url("../img/main/donate.jpg");
+    min-height: 500px;
+}
+
+.donateText{
+    background-color: #F3A536;
+    text-align: center;
+    padding: 50px 100px 50px 100px;
+}
+
+.donateText p{
+    font-family: 'Trade Winds';
+    font-size: 26px;
+    text-align: left;
+    color: #ffffff;
+}
+
+.donateGreen{
+    margin:25px;
+    width: 250px;
+    height: 75px;
+    border-radius: 10px;
+    background-color: #179e80;
+}
+
+.donateGreen a{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.makeadiffernece h1{
+    padding: 25px 0 25px 0;
+    font-size: 64px;
+    font-weight: 500;
+    font-stretch: condensed;
+    color: #179e80;
+}
+.makeadiffernece h2{
+    font-size: 64px;
+    font-weight: 500;
+    font-stretch: condensed;
+    color: #179e80;
+}
+.makeadiffernece p{
+    font-size: 18px;
+    font-weight: 500;
+    color: #4a4a4a;
+}
+.makeadiffernece img{
+    width: 100%;
+}
+.makeadiffernece .imgPadding{
+    padding:0;
 }
