@@ -114,16 +114,6 @@ footer{
  #journey button{
      margin-bottom: 50px;
  }
-#whatwedo i{
-    border-radius: 25%;
-    color: #757573;
-    padding:10px 10px 10px 10px;
-    margin: 10px 10px 10px 10px;
-}
-#whatwedo i:hover{
-    background-color: #f5a623;
-    color: #ffffff;
-}
 
  .learnMore{
      width: 168px;

@@ -18,31 +18,31 @@
             <h1><b>What We Do</b></h1>
         </div>
         <div class="col-md-2 col-md-offset-1">
-            <i class="fa fa-5x fa-book"></i>
+            <img src="assets/img/icons/book_grey.png">
             <p>
                 Reading clubs and After School Programs
             </p>
         </div>
         <div class="col-md-2 vline">
-            <i class="fa fa-5x fa-users"></i>
+            <img src="assets/img/icons/kids_grey.png">
             <p>
                 Sponsorship Programs for Pupils from Under-Served Families
             </p>
         </div>
         <div class="col-md-2 vline">
-            <i class="fa fa-5x fa-pencil"></i>
+            <img src="assets/img/icons/Backpack_grey.png">
             <p>
                 Back to School Initiatives
             </p>
         </div>
         <div class="col-md-2 vline">
-            <i class="fa fa-5x fa-graduation-cap"></i>
+            <img src="assets/img/icons/people_grey.png">
             <p>
                 Trainings and Workshops for Teachers
             </p>
         </div>
         <div class="col-md-2 vline">
-            <i class="fa fa-5x fa-building"></i>
+            <img src="assets/img/icons/hammer_grey.png">
             <p>
                 Construct and Refurbish School Facilities
             </p>
