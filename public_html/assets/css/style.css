@@ -456,3 +456,11 @@ footer{
 .makeadiffernece .imgPadding{
     padding:0;
 }
+.positionfix{
+    min-height: 400px;
+    position: relative;
+}
+.positionlow{
+    position: absolute;
+    bottom:0;
+}

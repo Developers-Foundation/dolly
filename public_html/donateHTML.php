@@ -38,31 +38,35 @@
             <div class="col-md-6 imgPadding">
                 <img class="img-responsive" src="assets/img/main/donate1.jpg">
             </div>
-            <div class="col-md-6">
-                <h2><strong>Children</strong></h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor arcu, sodales eu lacus vel,
-                    pulvinar dapibus odio. Aliquam aliquet consequat rutrum. Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Integer volutpat neque sed arcu efficitur volutpat. Ut eget dolor sit amet risus
-                    lacinia tempor. Pellentesque dictum blandit ante in lobortis. Nulla facilisi. Suspendisse aliquet
-                    a tortor sit amet sollicitudin. Sed cursus finibus risus, quis posuere purus semper quis.
-                    Vivamus non ex dapibus, pretium nulla at, iaculis arcu. Vivamus commodo purus eget diam
-                    luctus consequat.
-                </p>
+            <div class="col-md-6 positionfix">
+                <div class="positionlow">
+                    <h2><strong>Children</strong></h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor arcu, sodales eu lacus vel,
+                        pulvinar dapibus odio. Aliquam aliquet consequat rutrum. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Integer volutpat neque sed arcu efficitur volutpat. Ut eget dolor sit amet risus
+                        lacinia tempor. Pellentesque dictum blandit ante in lobortis. Nulla facilisi. Suspendisse aliquet
+                        a tortor sit amet sollicitudin. Sed cursus finibus risus, quis posuere purus semper quis.
+                        Vivamus non ex dapibus, pretium nulla at, iaculis arcu. Vivamus commodo purus eget diam
+                        luctus consequat.
+                    </p>
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
-                <h2><strong>School</strong></h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor arcu, sodales eu lacus vel,
-                    pulvinar dapibus odio. Aliquam aliquet consequat rutrum. Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Integer volutpat neque sed arcu efficitur volutpat. Ut eget dolor sit amet risus
-                    lacinia tempor. Pellentesque dictum blandit ante in lobortis. Nulla facilisi. Suspendisse aliquet
-                    a tortor sit amet sollicitudin. Sed cursus finibus risus, quis posuere purus semper quis.
-                    Vivamus non ex dapibus, pretium nulla at, iaculis arcu. Vivamus commodo purus eget diam
-                    luctus consequat.
-                </p>
+            <div class="col-md-6 positionfix">
+                <div class="positionlow">
+                    <h2><strong>School</strong></h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor arcu, sodales eu lacus vel,
+                        pulvinar dapibus odio. Aliquam aliquet consequat rutrum. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Integer volutpat neque sed arcu efficitur volutpat. Ut eget dolor sit amet risus
+                        lacinia tempor. Pellentesque dictum blandit ante in lobortis. Nulla facilisi. Suspendisse aliquet
+                        a tortor sit amet sollicitudin. Sed cursus finibus risus, quis posuere purus semper quis.
+                        Vivamus non ex dapibus, pretium nulla at, iaculis arcu. Vivamus commodo purus eget diam
+                        luctus consequat.
+                    </p>
+                </div>
             </div>
             <div class="col-md-6 imgPadding">
                 <img class="img-responsive" src="assets/img/main/donate2.jpg">
@@ -72,17 +76,19 @@
             <div class="col-md-6 imgPadding">
                 <img class="img-responsive" src="assets/img/main/donate3.png">
             </div>
-            <div class="col-md-6">
-                <h2><strong>Everyday Life</strong></h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor arcu, sodales eu lacus vel,
-                    pulvinar dapibus odio. Aliquam aliquet consequat rutrum. Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Integer volutpat neque sed arcu efficitur volutpat. Ut eget dolor sit amet risus
-                    lacinia tempor. Pellentesque dictum blandit ante in lobortis. Nulla facilisi. Suspendisse aliquet
-                    a tortor sit amet sollicitudin. Sed cursus finibus risus, quis posuere purus semper quis.
-                    Vivamus non ex dapibus, pretium nulla at, iaculis arcu. Vivamus commodo purus eget diam
-                    luctus consequat.
-                </p>
+            <div class="col-md-6 positionfix">
+                <div class="positionlow">
+                    <h2><strong>Everyday Life</strong></h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor arcu, sodales eu lacus vel,
+                        pulvinar dapibus odio. Aliquam aliquet consequat rutrum. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Integer volutpat neque sed arcu efficitur volutpat. Ut eget dolor sit amet risus
+                        lacinia tempor. Pellentesque dictum blandit ante in lobortis. Nulla facilisi. Suspendisse aliquet
+                        a tortor sit amet sollicitudin. Sed cursus finibus risus, quis posuere purus semper quis.
+                        Vivamus non ex dapibus, pretium nulla at, iaculis arcu. Vivamus commodo purus eget diam
+                        luctus consequat.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
