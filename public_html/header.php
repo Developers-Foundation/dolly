@@ -7,7 +7,7 @@
 
     <title>Dolly Children Foundation</title>
 
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+<!--     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/> -->
 
     <!-- Favicon -->
 <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
@@ -33,15 +33,15 @@
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700"/>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
 
-<!-- CSS Files -->
+    <!-- CSS Files -->
 <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="assets/css/style.css" rel="stylesheet"/>
 
 </head>
 
 <body>
-<nav id="navbar" class="navbar navbar-default">
-    <div class="container">
+<nav id="navbar" class="navbar navbar-fixed-top navbar-default">
+    <div class="container container-set">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -51,16 +51,21 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <img class="img-responsive" src="assets/img/main/Logo.jpg">
+            <a href="index.php" class="navbar-brand navbar-left"><img src="assets/img/main/logo.png"></a>
+
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#About" class="page-scroll">About Us</a></li>
-                <li><a href="#Contact" class="page-scroll">Contact Us</a></li>
+        <div class="collapse navbar-collapse mobilesize" id="navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right container-set">
                 <li>
-                    <a href="#Donate" class="page-scroll"><button class="btn donatebutton">Donate</button></a>
+                    <a href="about.php" class="page-scroll">About Us</a>
+                </li>
+                <li>
+                    <a href="contact.php" class="page-scroll">Contact Us</a>
+                </li>
+                <li>
+                    <a href="donate.php" class="page-scroll" style="padding: 0;"><button class="btn donatebutton">Donate</button></a>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->

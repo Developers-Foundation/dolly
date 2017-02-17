@@ -29,5 +29,6 @@
 
 <script src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/js/main.js" type="text/javascript"></script>
 
 </html>
