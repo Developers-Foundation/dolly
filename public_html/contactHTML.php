@@ -22,7 +22,7 @@
                 </div>
                 <div class="col-md-6">
                             <textarea class="form-control form-input-message" placeholder="Your Message"
-                                      rows="5"></textarea>
+                                      rows="6"></textarea>
                 </div>
                 <div class="col-md-12 text-center">
                     <button class="btn btn-raised btn-primary btn-lg">Send</button>
