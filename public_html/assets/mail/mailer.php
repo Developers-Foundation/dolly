@@ -5,7 +5,7 @@ if($_SERVER['REQUEST_METHOD'] === 'GET'){
 }
 require '../js/vendor/autoload.php'; // MAKE SURE THIS POINTS TO YOUR COMPOSER VENDOR FOLDER
 $getPost = (array)json_decode(file_get_contents('php://input'));
-$sendgrid = new SendGrid($_ENV["SENDGRID_API_KEY"]); // MAKE SURE THE API KEY IS INSIDE THE ENV VARIABLE
+$sendgrid = new SendGrid($_ENV["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"]); // MAKE SURE THE API KEY IS INSIDE THE ENV VARIABLE
 $email = new SendGrid\Email();
 $email
     ->addTo($getPost['sendTo'])
