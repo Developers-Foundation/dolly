@@ -34,7 +34,7 @@ $(document).ready(function () {
             });
 
             $.ajax({
-                url: '../mail/mailer.php',
+                url: 'assets/mail/mailer.php',
                 crossDomain: false,
                 data: sendData,
                 method: "POST",
