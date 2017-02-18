@@ -10,6 +10,7 @@
     }
   ],
   "require": {
-    "sendgrid/sendgrid": "4.0.4"
+    "sendgrid/sendgrid": "4.0.4",
+    "stripe/stripe-php": "v4.4.0"
   }
 }
