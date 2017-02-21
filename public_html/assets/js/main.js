@@ -16,7 +16,7 @@ $(document).ready(function () {
         if (thisForm.attr('data-form-type').indexOf("nob") > -1) {
             // Nob form
             var sendFrom = emailField.val(),
-                sendTo = "michael511.mp@gmail.com",
+                sendTo = "dollychildrenfoundationng@gmail.com",
                 subject = "Message from " + nameField.val(),
                 msg = messageField.val(),
                 msgHTML = "<p>" + messageField.val() + "<p>",
