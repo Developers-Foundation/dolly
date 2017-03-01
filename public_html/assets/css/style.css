@@ -35,16 +35,7 @@ h1, h2, h3, h4, h5, h6, p{
     width:auto;
     display: block;
 }
-.donatebutton{
-    width: 120px;
-    height: 50px;
-    border-radius: 15px;
-    background-color: #f5a623;
-    font-family: Calibri, sans-serif;
-    font-size: 20px;
-    font-weight: normal;
-    color: #ffffff;
-}
+
 .footercolor {
     color: white;
 }
@@ -97,9 +88,10 @@ footer{
  }
 
  .whiteBG{
-     margin: 150px 25px 150px 25px;
+     margin: 170px 25px 150px 25px;
      border-radius: 10px;
      background-color: rgba(255, 255, 255, 0.48);
+     padding-top: 10px;
  }
 
  .donate{
@@ -108,6 +100,16 @@ footer{
      border-radius: 8px;
      background-color: #f5a623;
  }
+.donatebutton{
+    width: 120px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #f5a623;
+    font-family: Calibri, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    color: #ffffff;
+}
  #journey a{
      font-size: 24px;
      font-weight: 800;
@@ -251,7 +253,7 @@ footer{
 }
 
 .contactForm textarea {
-    height: 100px;
+    height: 115px;
     resize: vertical;
 }
 
@@ -462,6 +464,7 @@ footer{
 .positionlow{
     position: absolute;
     bottom:0;
+    padding: 0 40px;
 }
 
 /* ============================================== DONATE MODAL ================================================= */

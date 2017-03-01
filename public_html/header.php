@@ -65,7 +65,9 @@
                     <a href="contact.php" class="page-scroll">Contact Us</a>
                 </li>
                 <li>
-                    <a href="donate.php" class="page-scroll" style="padding: 0;"><button class="btn donatebutton">Donate</button></a>
+                    <a href="donate.php" class="page-scroll" style="padding: 0;">
+                        <button class="btn donatebutton">Donate</button>
+                    </a>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->

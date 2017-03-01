@@ -2,12 +2,13 @@
     <div class="row">
         <div class="col-md-offset-5 col-md-7 text-center">
             <div class="whiteBG">
-                <p>You Can Help Too</p>
-                <hr>
+                <br>
                 <h1>Join the Journey</h1>
-                <button class="btn donate">
-                    <a href="donate.php">Donate</a>
-                </button>
+                <a href="donate.php">
+                    <button class="btn donatebutton">
+                        Donate
+                    </button>
+                </a>
             </div>
         </div>
     </div>
