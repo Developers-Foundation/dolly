@@ -2,7 +2,7 @@
     <div class="donateBG">
         <div class="caption">
             <h1>Donate</h1>
-            <div class="captionRectangle"></div>
+<!--            <div class="captionRectangle"></div>-->
         </div>
     </div>
     <div class="donateText">
@@ -19,7 +19,7 @@
         <p>
             Thank you.
         </p>
-        <div class="row text-center">
+        <div class="row text-center" style="padding-top: 25px">
             <div class="col-md-6">
                 <button class="btn donateGreen" data-toggle="modal" data-target="#donate-modal"><a>Donate</a></button>
             </div>

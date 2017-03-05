@@ -59,10 +59,10 @@
         <div class="collapse navbar-collapse mobilesize" id="navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right container-set">
                 <li>
-                    <a href="about.php" class="page-scroll">About Us</a>
+                    <a href="about.php" class="page-scroll navTitle">About Us</a>
                 </li>
                 <li>
-                    <a href="contact.php" class="page-scroll">Contact Us</a>
+                    <a href="contact.php" class="page-scroll navTitle">Contact Us</a>
                 </li>
                 <li>
                     <a href="donate.php" class="page-scroll" style="padding: 0;">

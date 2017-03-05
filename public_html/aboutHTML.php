@@ -3,7 +3,7 @@
     <div class="aboutusBG">
         <div class="caption">
             <h1>About Us</h1>
-            <div class="captionRectangle"></div>
+<!--            <div class="captionRectangle"></div>-->
         </div>
     </div>
 

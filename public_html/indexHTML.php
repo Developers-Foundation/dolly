@@ -3,7 +3,8 @@
         <div class="col-md-offset-5 col-md-7 text-center">
             <div class="whiteBG">
                 <br>
-                <h1>Join the Journey</h1>
+                <h1>Join the Journey!</h1>
+                <p>Inspiring the African Child through educational aids and interventions centered on mental and intellectual programs.</p>
                 <a href="donate.php">
                     <button class="btn donatebutton">
                         Donate
@@ -49,9 +50,9 @@
             </p>
         </div>
         <div class="col-md-12 text-center">
-            <button class="btn learnMore">
-                <a href="about.php">Learn More</a>
-            </button>
+            <a href="about.php">
+                <button class="btn learnMore">Learn More</button>
+            </a>
         </div>
     </div>
 
@@ -61,9 +62,10 @@
         <div class="col-md-offset-1 col-md-4 text-center">
             <div class="whiteBG">
                 <p><b>Send us your questions, or request for any additional information.</b></p>
-                <button class="btn email">
-                    <a href="contact.php">Email Us</a>
-                </button>
+                <a href="contact.php">
+                    <button class="btn email">Email Us</button>
+                </a>
+
             </div>
         </div>
     </div>

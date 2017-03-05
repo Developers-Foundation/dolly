@@ -2,7 +2,7 @@
     <div class="contactusBG">
         <div class="caption">
             <h1>Contact Us</h1>
-            <div class="captionRectangle"></div>
+<!--            <div class="captionRectangle"></div>-->
         </div>
     </div>
 
