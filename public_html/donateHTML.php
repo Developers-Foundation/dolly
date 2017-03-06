@@ -21,10 +21,14 @@
         </p>
         <div class="row text-center" style="padding-top: 25px">
             <div class="col-md-6">
-                <button class="btn donateGreen" data-toggle="modal" data-target="#donate-modal"><a>Donate</a></button>
+                <a>
+                    <button class="btn donateGreen" data-toggle="modal" data-target="#donate-modal">Donate</button>
+                </a>
             </div>
             <div class="col-md-6">
-                <button class="btn donateGreen"><a>Sponsor a Child</a></button>
+                <a>
+                    <button class="btn donateGreen" data-toggle="modal" data-target="#sponsor-modal">Sponsor a Child</button>
+                </a>
             </div>
         </div>
     </div>
@@ -119,8 +123,9 @@
                     <input type="text" name="expMM" placeholder="Expiration - MM" data-stripe="exp_month" style="width: 49%;">
                     <input type="text" name="expYY" placeholder="Expiration - YY" data-stripe="exp_year" style="width: 49%;">
                     <input type="text" name="cvc" placeholder="CVC" data-stripe="cvc">
-                    <input type="text" name="amount" placeholder="Amount ($)" disabled="disabled">
-                    <input type="submit" name="submit" class="donate donatemodal-submit submit" value="Submit Payment">
+<!--                    <input type="text" name="amount" placeholder="Amount ($)" disabled="disabled">-->
+                    <input type="submit" name="submit" class="donate donatemodal-submit submit" value="Continue">
+                    <p>Your card will not be charged at this step.</p>
                 </form>
                 <span class="payment-errors"></span>
 
@@ -130,6 +135,46 @@
             </div>
         </div>
     </div>
+
+    <!-- Sponsor a Child Modal -->
+    <div class="modal fade" id="sponsor-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="donatemodal-container">
+                <div class="closeModal">
+                    <a data-toggle="modal" data-target="#sponsor-modal"><i class="fa fa-times" style="font-size: 16px"></i></a>
+                </div>
+
+                <h1>Sponsor a Child</h1><br>
+
+                <h4>Contact Information</h4>
+
+                <form action="../stripe.php" method="POST" id="payment-form">
+                    <input type="text" name="cardnumber" placeholder="Full Name">
+                    <input type="text" name="expiration" placeholder="Address">
+                    <input type="text" name="cvc" placeholder="Postal Code" style="width: 49%;">
+                    <input type="text" name="cvc" placeholder="Country" style="width: 49%">
+                    <input type="text" name="cvc" placeholder="Email">
+                    <input type="text" name="cvc" placeholder="Phone Number">
+
+                    <h4>Card Details  <i class="fa fa-lock" style="padding-left: 3px"></i></h4>
+
+                    <input type="text" name="cardnumber" placeholder="Card Number" data-stripe="number">
+                    <input type="text" name="expMM" placeholder="Expiration - MM" data-stripe="exp_month" style="width: 49%;">
+                    <input type="text" name="expYY" placeholder="Expiration - YY" data-stripe="exp_year" style="width: 49%;">
+                    <input type="text" name="cvc" placeholder="CVC" data-stripe="cvc">
+<!--                    <input type="text" name="amount" placeholder="Amount ($)" disabled="disabled">-->
+                    <input type="submit" name="submit" class="donate donatemodal-submit submit" value="Continue">
+                    <p>Your card will not be charged at this step.</p>
+                </form>
+                <span class="payment-errors"></span>
+
+                <div class="donate-help">
+                    <!--                    <a href="#">Help</a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script
             src="https://code.jquery.com/jquery-3.1.1.slim.min.js"

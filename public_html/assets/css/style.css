@@ -430,7 +430,7 @@ footer{
 }
 
 .donateText p{
-    font-size: 26px;
+    font-size: 20px;
     text-align: left;
     color: #ffffff;
 }
@@ -442,13 +442,21 @@ footer{
     border-radius: 10px;
     background-color: #179e80;
 }
+.donateGreen a:hover{
+    color: #333;
+    text-decoration: none;
+}
 
-.donateGreen a{
+.donateGreen {
     color: white;
     font-size: 20px;
     font-weight: 500;
 }
-
+.donateHTML form p {
+    font-size: 10px;
+    text-align: center;
+    color: #737370;
+}
 .makeadiffernece h1{
     padding: 25px 0 25px 0;
     font-size: 64px;
