@@ -112,10 +112,10 @@
                 <form action="../stripe.php" method="POST" id="payment-form">
                     <input type="text" name="cardnumber" placeholder="Full Name">
                     <input type="text" name="expiration" placeholder="Address">
-                    <input type="text" name="cvc" placeholder="Postal Code" style="width: 49%;">
-                    <input type="text" name="cvc" placeholder="Country" style="width: 49%">
-                    <input type="text" name="cvc" placeholder="Email">
-                    <input type="text" name="cvc" placeholder="Phone Number">
+                    <input type="text" name="postalcode" placeholder="Postal Code" style="width: 49%;">
+                    <input type="text" name="country" placeholder="Country" style="width: 49%">
+                    <input type="text" name="email" placeholder="Email">
+                    <input type="text" name="phonenumber" placeholder="Phone Number">
 
                     <h4>Card Details  <i class="fa fa-lock" style="padding-left: 3px"></i></h4>
                     
@@ -123,7 +123,7 @@
                     <input type="text" name="expMM" placeholder="Expiration - MM" data-stripe="exp_month" style="width: 49%;">
                     <input type="text" name="expYY" placeholder="Expiration - YY" data-stripe="exp_year" style="width: 49%;">
                     <input type="text" name="cvc" placeholder="CVC" data-stripe="cvc">
-<!--                    <input type="text" name="amount" placeholder="Amount ($)" disabled="disabled">-->
+                    <input type="text" name="amount" placeholder="Amount ($)" disabled="disabled">
                     <input type="submit" name="submit" class="donate donatemodal-submit submit" value="Continue">
                     <p>Your card will not be charged at this step.</p>
                 </form>
@@ -148,13 +148,14 @@
 
                 <h4>Contact Information</h4>
 
-                <form action="../stripe.php" method="POST" id="payment-form">
+                <form action="../stripe.php" method="POST" id="payment-form" >
+                    <input type="hidden" name="type" value="sponsor">
                     <input type="text" name="cardnumber" placeholder="Full Name">
                     <input type="text" name="expiration" placeholder="Address">
-                    <input type="text" name="cvc" placeholder="Postal Code" style="width: 49%;">
-                    <input type="text" name="cvc" placeholder="Country" style="width: 49%">
-                    <input type="text" name="cvc" placeholder="Email">
-                    <input type="text" name="cvc" placeholder="Phone Number">
+                    <input type="text" name="postalcode" placeholder="Postal Code" style="width: 49%;">
+                    <input type="text" name="country" placeholder="Country" style="width: 49%">
+                    <input type="text" name="email" placeholder="Email">
+                    <input type="text" name="phonenumber" placeholder="Phone Number">
 
                     <h4>Card Details  <i class="fa fa-lock" style="padding-left: 3px"></i></h4>
 
@@ -162,7 +163,7 @@
                     <input type="text" name="expMM" placeholder="Expiration - MM" data-stripe="exp_month" style="width: 49%;">
                     <input type="text" name="expYY" placeholder="Expiration - YY" data-stripe="exp_year" style="width: 49%;">
                     <input type="text" name="cvc" placeholder="CVC" data-stripe="cvc">
-<!--                    <input type="text" name="amount" placeholder="Amount ($)" disabled="disabled">-->
+                    <input type="text" name="amount" placeholder="Amount ($)" disabled="disabled">
                     <input type="submit" name="submit" class="donate donatemodal-submit submit" value="Continue">
                     <p>Your card will not be charged at this step.</p>
                 </form>
