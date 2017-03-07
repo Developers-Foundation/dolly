@@ -19,7 +19,7 @@ $(function() {
 
 function stripeResponseHandler(status, response) {
     // Grab the form:
-    var $form = $('#payment-form');
+    var form = $('#payment-form');
 
     if (response.error) { // Problem!
         // Show the errors on the form:

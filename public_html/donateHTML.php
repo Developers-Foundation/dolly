@@ -123,8 +123,8 @@
                     <input type="text" name="expMM" placeholder="Expiration - MM" data-stripe="exp_month" style="width: 49%;">
                     <input type="text" name="expYY" placeholder="Expiration - YY" data-stripe="exp_year" style="width: 49%;">
                     <input type="text" name="cvc" placeholder="CVC" data-stripe="cvc">
-                    <input type="text" name="amount" placeholder="Amount ($)" disabled="disabled">
-                    <input type="submit" name="submit" class="donate donatemodal-submit submit" value="Continue">
+                    <input type="text" name="amount" placeholder="Amount ($)" >
+                    <input type="submit" name="submitButton" class="donate donatemodal-submit submit" value="Continue">
                     <p>Your card will not be charged at this step.</p>
                 </form>
                 <span class="payment-errors"></span>
