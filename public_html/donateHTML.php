@@ -109,7 +109,7 @@
 
                 <h4>Contact Information</h4>
                     
-                <form action="../stripe.php" method="POST" id="payment-form">
+                <form action="assets/stripe/stripe.php" method="POST" id="payment-form">
                     <input type="text" name="cardnumber" placeholder="Full Name">
                     <input type="text" name="expiration" placeholder="Address">
                     <input type="text" name="postalcode" placeholder="Postal Code" style="width: 49%;">
@@ -148,7 +148,7 @@
 
                 <h4>Contact Information</h4>
 
-                <form action="../stripe.php" method="POST" id="payment-form" >
+                <form action="assets/stripe/stripe.php" method="POST" id="payment-form" >
                     <input type="hidden" name="type" value="sponsor">
                     <input type="text" name="cardnumber" placeholder="Full Name">
                     <input type="text" name="expiration" placeholder="Address">
@@ -182,5 +182,8 @@
             integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
             crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script type="text/javascript">
+        Stripe.setPublishableKey('<?php echo $_ENV["STRIPE_API"]; ?>');
+    </script>
     <script type="text/javascript" src="assets/js/stripe.js"></script>
 </div>

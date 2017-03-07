@@ -2,7 +2,6 @@
  * Created by harrisonchow on 1/29/17.
  */
 
-Stripe.setPublishableKey('pk_test_QChjrSlxnapDTftVFe5aHKmy');
 $(function() {
     var form = $('#payment-form');
     form.submit(function(event) {
