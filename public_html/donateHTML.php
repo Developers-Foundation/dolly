@@ -110,22 +110,26 @@
                 <h4>Contact Information</h4>
                     
                 <form action="assets/stripe/stripe.php" method="POST" id="payment-form">
-                    <input type="text" name="cardnumber" placeholder="Full Name">
-                    <input type="text" name="expiration" placeholder="Address">
-                    <input type="text" name="postalcode" placeholder="Postal Code" style="width: 49%;">
-                    <input type="text" name="country" placeholder="Country" style="width: 49%">
-                    <input type="text" name="email" placeholder="Email">
-                    <input type="text" name="phonenumber" placeholder="Phone Number">
+                    <p class="payment-errors"></p>
+
+                    <input type="text" name="name"            placeholder="Full Name"    data-stripe="name">
+                    <input type="text" name="address_line1"   placeholder="Address"      data-stripe="address_line1">
+                    <input type="text" name="address_zip"     placeholder="Postal Code"  data-stripe="address_zip"  style="width: 49%">
+                    <input type="text" name="address_city"    placeholder="City"         data-stripe="address_city" style="width: 49%">
+                    <input type="text" name="address_state"   placeholder="Province"     data-stripe="address_state" style="width: 49%">
+                    <input type="text" name="address_country" placeholder="Country"      data-stripe="address_country" style="width: 49%">
+                    <input type="text" name="receipt_email"   placeholder="Email">
+                    <input type="text" name="receipt_number"  placeholder="Phone Number">
 
                     <h4>Card Details  <i class="fa fa-lock" style="padding-left: 3px"></i></h4>
                     
-                    <input type="text" name="cardnumber" placeholder="Card Number" data-stripe="number">
-                    <input type="text" name="expMM" placeholder="Expiration - MM" data-stripe="exp_month" style="width: 49%;">
-                    <input type="text" name="expYY" placeholder="Expiration - YY" data-stripe="exp_year" style="width: 49%;">
-                    <input type="text" name="cvc" placeholder="CVC" data-stripe="cvc">
-                    <input type="text" name="amount" placeholder="Amount ($)" >
-                    <input type="submit" name="submitButton" class="donate donatemodal-submit submit" value="Continue">
-                    <p>Your card will not be charged at this step.</p>
+                    <input type="text"   name="cardnumber"      placeholder="Card Number"       data-stripe="number">
+                    <input type="text"   name="exp_month"       placeholder="Expiration - MM"   data-stripe="exp_month" style="width: 49%;">
+                    <input type="text"   name="exp_year"        placeholder="Expiration - YY"   data-stripe="exp_year"  style="width: 49%;">
+                    <input type="text"   name="cvc"             placeholder="CVC"               data-stripe="cvc">
+                    <input type="text"   name="amount"          placeholder="Amount ($)" >
+                    <input type="submit" name="submitButton" class="donate donatemodal-submit submit" value="Donate">
+                    <!--<p>Your card will not be charged at this step.</p>-->
                 </form>
                 <span class="payment-errors"></span>
 
@@ -175,7 +179,6 @@
 <!--            </div>-->
 <!--        </div>-->
 <!--    </div>-->
-
 
     <script
             src="https://code.jquery.com/jquery-3.1.1.slim.min.js"

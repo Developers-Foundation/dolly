@@ -17,12 +17,14 @@ include_once "../../../vendor/autoload.php";
 $token = $_POST['stripeToken'];
 //$token = $getPost['stripeToken'];
 
-//echo $token;
-
 // Charge the user's card:
 $charge = \Stripe\Charge::create(array(
     "amount" => $_POST['amount'] * 100,
     "currency" => "cad",
     "description" => "Example charge",
+    "receipt_email" => $_POST['receipt_email'],
+    "receipt_number" => $_POST['receipt_number'],
     "source" => $token,
 ));
+
+echo '{success: true}';
