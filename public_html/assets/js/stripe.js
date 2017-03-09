@@ -34,7 +34,9 @@ function stripeResponseHandler(status, response) {
         form.append($('<input type="hidden" name="stripeToken">').val(token));
 
         // Submit the form:
+        // TODO: replace with ajax to avoid redirecting
         form.get(0).submit();
-        // replace with ajax to avoid redirecting
+
+        $(".alert").removeClass("hidden");
     }
 }

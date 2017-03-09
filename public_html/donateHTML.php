@@ -1,10 +1,17 @@
+
 <div class="donateHTML">
+    <div class="alert alert-success alert-dismissible hidden" role="alert" style="margin: 81px 0 0 0; border-radius: 0">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>Thank you!</strong> We truly appreciate your donation.
+    </div>
+
     <div class="donateBG">
         <div class="caption">
             <h1>Donate</h1>
 <!--            <div class="captionRectangle"></div>-->
         </div>
     </div>
+
     <div class="donateText">
         <p>
             Not far from you, children still go to school with torn uniforms, with no stationery, no shoes, or school bag.
