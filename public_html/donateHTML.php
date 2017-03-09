@@ -139,7 +139,7 @@
                     <input type="text"   name="cvc"             placeholder="CVC"               data-stripe="cvc">
                     <input type="text"   name="amount"          placeholder="Donation Amount ($)" >
                     <input type="submit" name="submitButton" class="donate donatemodal-submit submit" value="Donate">
-                    <p>Your card will be charged only once with the donation amount specified above.</p>
+                    <p>Your card will be charged only once, with the donation amount specified above.</p>
                 </form>
                 <span class="payment-errors"></span>
 
@@ -183,7 +183,7 @@
                     <input type="text"   name="cvc"             placeholder="CVC"               data-stripe="cvc">
                     <input type="text"   name="amount"          placeholder="Monthly Donation Amount ($)" >
                     <input type="submit" name="submitButton" class="donate donatemodal-submit submit" value="Sponsor">
-                    <p>Your card will be charged monthly with the donation amount above. Please email us at
+                    <p>Your card will be charged monthly with the donation amount specified above. Please email us at
                         example@example.com if you would like us to remove your card from the sponsors list.</p>
                 </form>
                 <span class="payment-errors"></span>
