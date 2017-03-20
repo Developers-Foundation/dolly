@@ -15,9 +15,7 @@ if ($_POST) {
         \Stripe\Charge::create(array(
             "amount" => 1000,
             "currency" => "usd",
-            "card" => $_POST['stripeToken'],
-            "receipt_email" => $_POST['receipt_email'],
-            "receipt_number" => $_POST['receipt_number']
+            "card" => $_POST['stripeToken']
         ));
 
         $success = 'Your payment was successful.';
