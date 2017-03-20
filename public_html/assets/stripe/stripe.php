@@ -6,7 +6,7 @@ $error = 'error';
 $success = 'success';
 
 if ($_POST) {
-    \Stripe\Stripe::setApiKey('sk_test_M2T4OhPoG0Tax3JXdoZqAoBI');
+    \Stripe\Stripe::setApiKey($_ENV['STRIPE_API_SECRET']);
 
     try {
         if (!isset($_POST['stripeToken']))
