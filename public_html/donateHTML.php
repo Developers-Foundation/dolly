@@ -106,6 +106,16 @@
         </div>
     </div>
 
+
+
+
+
+
+
+    <!-- "To best leverage Stripe’s advanced fraud functionality, include this script
+        on every page on your site, not just the checkout page." -->
+    <script src="https://js.stripe.com/v1/"></script>
+
     <!-- Donate Modal -->
     <div class="modal fade" id="donate-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
         <div class="modal-dialog">
@@ -116,32 +126,55 @@
 
                 <h1>Donate</h1><br>
 
-                <h4>Contact Information</h4>
-                    
+<!--                <form action="assets/stripe/stripe.php" method="post" id="payment-form">-->
+<!--                    <p class="payment-errors"></p>-->
+<!---->
+<!--                    <h4>Contact Information</h4>-->
+<!---->
+<!--                    <input type="hidden" name="type" value="donate">-->
+<!--                    <input type="text" name="name"            placeholder="Full Name"    data-stripe="name">-->
+<!--                    <input type="text" name="address_line1"   placeholder="Address"      data-stripe="address_line1">-->
+<!--                    <input type="text" name="address_zip"     placeholder="Postal Code"  data-stripe="address_zip"  style="width: 49%">-->
+<!--                    <input type="text" name="address_city"    placeholder="City"         data-stripe="address_city" style="width: 49%">-->
+<!--                    <input type="text" name="address_state"   placeholder="Province"     data-stripe="address_state" style="width: 49%">-->
+<!--                    <input type="text" name="address_country" placeholder="Country"      data-stripe="address_country" style="width: 49%">-->
+<!--                    <input type="text" name="receipt_email"   placeholder="Email">-->
+<!--                    <input type="text" name="receipt_number"  placeholder="Phone Number">-->
+<!--                    -->
+<!--                    <h4>Card Details  <i class="fa fa-lock" style="padding-left: 3px"></i></h4>-->
+<!--                    -->
+<!--                    <input type="text"   name="cardnumber"      placeholder="Card Number"       data-stripe="number">-->
+<!--                    <input type="text"   name="exp_month"       placeholder="Expiration - MM"   data-stripe="exp_month" style="width: 49%;">-->
+<!--                    <input type="text"   name="exp_year"        placeholder="Expiration - YY"   data-stripe="exp_year"  style="width: 49%;">-->
+<!--                    <input type="text"   name="cvc"             placeholder="CVC"               data-stripe="cvc">-->
+<!--                    <input type="text"   name="amount"          placeholder="Donation Amount ($)" >-->
+<!--                    <input type="submit" name="submitButton" class="donate donatemodal-submit submit" value="Donate">-->
+<!--                    <p>Your card will be charged only once, with the donation amount specified above.</p>-->
+<!---->
+<!--                </form>-->
+<!--                <span class="payment-errors"></span>-->
+
+                <h1>Charge $10 with Stripe</h1>
+                <!-- to display errors returned by createToken -->
+                <span class="payment-errors"><?php $error ?></span>
+                <span class="payment-success"><?php $success ?></span>
                 <form action="assets/stripe/stripe.php" method="POST" id="payment-form">
-                    <p class="payment-errors"></p>
-
-                    <input type="hidden" name="type" value="donate">
-                    <input type="text" name="name"            placeholder="Full Name"    data-stripe="name">
-                    <input type="text" name="address_line1"   placeholder="Address"      data-stripe="address_line1">
-                    <input type="text" name="address_zip"     placeholder="Postal Code"  data-stripe="address_zip"  style="width: 49%">
-                    <input type="text" name="address_city"    placeholder="City"         data-stripe="address_city" style="width: 49%">
-                    <input type="text" name="address_state"   placeholder="Province"     data-stripe="address_state" style="width: 49%">
-                    <input type="text" name="address_country" placeholder="Country"      data-stripe="address_country" style="width: 49%">
-                    <input type="text" name="receipt_email"   placeholder="Email">
-                    <input type="text" name="receipt_number"  placeholder="Phone Number">
-
-                    <h4>Card Details  <i class="fa fa-lock" style="padding-left: 3px"></i></h4>
-                    
-                    <input type="text"   name="cardnumber"      placeholder="Card Number"       data-stripe="number">
-                    <input type="text"   name="exp_month"       placeholder="Expiration - MM"   data-stripe="exp_month" style="width: 49%;">
-                    <input type="text"   name="exp_year"        placeholder="Expiration - YY"   data-stripe="exp_year"  style="width: 49%;">
-                    <input type="text"   name="cvc"             placeholder="CVC"               data-stripe="cvc">
-                    <input type="text"   name="amount"          placeholder="Donation Amount ($)" >
-                    <input type="submit" name="submitButton" class="donate donatemodal-submit submit" value="Donate">
-                    <p>Your card will be charged only once, with the donation amount specified above.</p>
+                    <div class="form-row">
+                        <label>Card Number</label>
+                        <input type="text" size="20" autocomplete="off" class="card-number" />
+                    </div>
+                    <div class="form-row">
+                        <label>CVC</label>
+                        <input type="text" size="4" autocomplete="off" class="card-cvc" />
+                    </div>
+                    <div class="form-row">
+                        <label>Expiration (MM/YYYY)</label>
+                        <input type="text" size="2" class="card-expiry-month"/>
+                        <span> / </span>
+                        <input type="text" size="4" class="card-expiry-year"/>
+                    </div>
+                    <button type="submit" class="submit-button">Submit Payment</button>
                 </form>
-                <span class="payment-errors"></span>
 
                 <div class="donate-help">
 <!--                    <a href="#">Help</a>-->
@@ -151,57 +184,53 @@
     </div>
 
     <!-- Sponsor a Child Modal -->
-    <div class="modal fade" id="sponsor-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog">
-            <div class="donatemodal-container">
-                <div class="closeModal">
-                    <a data-toggle="modal" data-target="#sponsor-modal"><i class="fa fa-times" style="font-size: 16px"></i></a>
-                </div>
-
-                <h1>Sponsor a Child</h1><br>
-
-                <h4>Contact Information</h4>
-
-                <form action="assets/stripe/stripe.php" method="POST" id="sponsor-form">
-                    <p class="payment-errors"></p>
-
-                    <input type="hidden" name="type" value="sponsor">
-                    <input type="text" name="name"            placeholder="Full Name"    data-stripe="name">
-                    <input type="text" name="address_line1"   placeholder="Address"      data-stripe="address_line1">
-                    <input type="text" name="address_zip"     placeholder="Postal Code"  data-stripe="address_zip"  style="width: 49%">
-                    <input type="text" name="address_city"    placeholder="City"         data-stripe="address_city" style="width: 49%">
-                    <input type="text" name="address_state"   placeholder="Province"     data-stripe="address_state" style="width: 49%">
-                    <input type="text" name="address_country" placeholder="Country"      data-stripe="address_country" style="width: 49%">
-                    <input type="text" name="receipt_email"   placeholder="Email">
-                    <input type="text" name="receipt_number"  placeholder="Phone Number">
-
-                    <h4>Card Details  <i class="fa fa-lock" style="padding-left: 3px"></i></h4>
-
-                    <input type="text"   name="cardnumber"      placeholder="Card Number"       data-stripe="number">
-                    <input type="text"   name="exp_month"       placeholder="Expiration - MM"   data-stripe="exp_month" style="width: 49%;">
-                    <input type="text"   name="exp_year"        placeholder="Expiration - YY"   data-stripe="exp_year"  style="width: 49%;">
-                    <input type="text"   name="cvc"             placeholder="CVC"               data-stripe="cvc">
-                    <input type="text"   name="amount"          placeholder="Monthly Donation Amount ($)" >
-                    <input type="submit" name="submitButton" class="donate donatemodal-submit submit" value="Sponsor">
-                    <p>Your card will be charged monthly with the donation amount specified above. Please email us at
-                        example@example.com if you would like us to remove your card from the sponsors list.</p>
-                </form>
-                <span class="payment-errors"></span>
-
-                <div class="donate-help">
-                    <!--                    <a href="#">Help</a>-->
-                </div>
-            </div>
-        </div>
-    </div>
+<!--    <div class="modal fade" id="sponsor-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">-->
+<!--        <div class="modal-dialog">-->
+<!--            <div class="donatemodal-container">-->
+<!--                <div class="closeModal">-->
+<!--                    <a data-toggle="modal" data-target="#sponsor-modal"><i class="fa fa-times" style="font-size: 16px"></i></a>-->
+<!--                </div>-->
+<!---->
+<!--                <h1>Sponsor a Child</h1><br>-->
+<!---->
+<!--                <h4>Contact Information</h4>-->
+<!---->
+<!--                <form action="assets/stripe/stripe.php" method="POST" id="sponsor-form">-->
+<!--                    <p class="payment-errors"></p>-->
+<!---->
+<!--                    <input type="hidden" name="type" value="sponsor">-->
+<!--                    <input type="text" name="name"            placeholder="Full Name"    data-stripe="name">-->
+<!--                    <input type="text" name="address_line1"   placeholder="Address"      data-stripe="address_line1">-->
+<!--                    <input type="text" name="address_zip"     placeholder="Postal Code"  data-stripe="address_zip"  style="width: 49%">-->
+<!--                    <input type="text" name="address_city"    placeholder="City"         data-stripe="address_city" style="width: 49%">-->
+<!--                    <input type="text" name="address_state"   placeholder="Province"     data-stripe="address_state" style="width: 49%">-->
+<!--                    <input type="text" name="address_country" placeholder="Country"      data-stripe="address_country" style="width: 49%">-->
+<!--                    <input type="text" name="receipt_email"   placeholder="Email">-->
+<!--                    <input type="text" name="receipt_number"  placeholder="Phone Number">-->
+<!---->
+<!--                    <h4>Card Details  <i class="fa fa-lock" style="padding-left: 3px"></i></h4>-->
+<!---->
+<!--                    <input type="text"   name="cardnumber"      placeholder="Card Number"       data-stripe="number">-->
+<!--                    <input type="text"   name="exp_month"       placeholder="Expiration - MM"   data-stripe="exp_month" style="width: 49%;">-->
+<!--                    <input type="text"   name="exp_year"        placeholder="Expiration - YY"   data-stripe="exp_year"  style="width: 49%;">-->
+<!--                    <input type="text"   name="cvc"             placeholder="CVC"               data-stripe="cvc">-->
+<!--                    <input type="text"   name="amount"          placeholder="Monthly Donation Amount ($)" >-->
+<!--                    <input type="submit" name="submitButton" class="donate donatemodal-submit submit" value="Sponsor">-->
+<!--                    <p>Your card will be charged monthly with the donation amount specified above. Please email us at-->
+<!--                        example@example.com if you would like us to remove your card from the sponsors list.</p>-->
+<!--                </form>-->
+<!--                <span class="payment-errors"></span>-->
+<!---->
+<!--                <div class="donate-help">-->
+<!--                    <!--                    <a href="#">Help</a>-->-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
     <script
             src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
             integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
             crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-    <script type="text/javascript">
-        Stripe.setPublishableKey('<?php echo $_ENV["STRIPE_API"]; ?>');
-    </script>
-    <script type="text/javascript" src="assets/js/stripe.js"></script>
+    <script type="text/javascript" src="./assets/js/stripe.js"></script>
 </div>

@@ -1,30 +1,27 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: harrisonchow
- * Date: 1/29/17
- * Time: 6:27 PM
- */
+require '../../../vendor/autoload.php';
+require '../../../vendor/stripe/stripe-php/init.php';
 
-include_once "../../../vendor/autoload.php";
+$error = 'error';
+$success = 'success';
 
-// Set your secret key: remember to change this to your live secret key in production
-// See your keys here: https://dashboard.stripe.com/account/apikeys
-\Stripe\Stripe::setApiKey($_ENV["STRIPE_API"]);
+if ($_POST) {
+    \Stripe\Stripe::setApiKey("sk_test_M2T4OhPoG0Tax3JXdoZqAoBI");
 
-// Token is created using Stripe.js or Checkout!
-// Get the payment token submitted by the form:
-$token = $_POST['stripeToken'];
-//$token = $getPost['stripeToken'];
+    try {
+        if (!isset($_POST['stripeToken']))
+            throw new Exception("The Stripe Token was not generated correctly");
 
-// Charge the user's card:
-$charge = \Stripe\Charge::create(array(
-    "amount" => $_POST['amount'] * 100,
-    "currency" => "cad",
-    "description" => "Example charge",
-    "receipt_email" => $_POST['receipt_email'],
-    "receipt_number" => $_POST['receipt_number'],
-    "source" => $token,
-));
+        \Stripe\Charge::create(array(
+            "amount" => 1000,
+            "currency" => "usd",
+            "card" => $_POST['stripeToken']));
 
-echo '{success: true}';
+        $success = 'Your payment was successful.';
+        echo $success;
+    }
+    catch (Exception $e) {
+        $error = $e->getMessage();
+    }
+}
+
