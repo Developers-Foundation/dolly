@@ -132,15 +132,14 @@
 
                     <h4>Contact Information</h4>
 
-<!--                    <input type="hidden" name="type" value="donate">-->
-<!--                    <input type="text" name="name"            placeholder="Full Name"    data-stripe="name">-->
-<!--                    <input type="text" name="address_line1"   placeholder="Address"      data-stripe="address_line1">-->
-<!--                    <input type="text" name="address_zip"     placeholder="Postal Code"  data-stripe="address_zip"  style="width: 49%">-->
-<!--                    <input type="text" name="address_city"    placeholder="City"         data-stripe="address_city" style="width: 49%">-->
-<!--                    <input type="text" name="address_state"   placeholder="Province"     data-stripe="address_state" style="width: 49%">-->
-<!--                    <input type="text" name="address_country" placeholder="Country"      data-stripe="address_country" style="width: 49%">-->
-<!--                    <input type="text" name="receipt_email"   placeholder="Email">-->
-<!--                    <input type="text" name="receipt_number"  placeholder="Phone Number">-->
+                    <input type="text" placeholder="Full Name"      id="customer_name" />
+                    <input type="text" placeholder="Address"        id="address_line1" />
+                    <input type="text" placeholder="Postal Code"    id="address_zip"        style="width: 49%" />
+                    <input type="text" placeholder="City"           id="address_city"       style="width: 49%" />
+                    <input type="text" placeholder="Province"       id="address_state"      style="width: 49%" />
+                    <input type="text" placeholder="Country"        id="address_country"    style="width: 49%" />
+                    <input type="text" placeholder="Email"          id="receipt_email"  name="receipt_email" />
+                    <input type="text" placeholder="Phone Number"   id="receipt_number" name="receipt_number" />
 
                     <h4>Card Details  <i class="fa fa-lock" style="padding-left: 3px"></i></h4>
 

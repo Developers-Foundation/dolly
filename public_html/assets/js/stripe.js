@@ -10,6 +10,12 @@ $(document).ready(function() {
 
         // createToken returns immediately - the supplied callback submits the form if there are no errors
         Stripe.createToken({
+            name: $('#customer_name').val(),
+            address_line1: $('#address_line1').val(),
+            address_zip: $('#address_zip').val(),
+            address_city: $('#address_city').val(),
+            address_state: $('#address_state').val(),
+            address_country: $('#address_country').val(),
             number: $('#card-number').val(),
             cvc: $('#card-cvc').val(),
             exp_month: $('#card-expiry-month').val(),

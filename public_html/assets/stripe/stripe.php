@@ -6,7 +6,7 @@ $error = 'error';
 $success = 'success';
 
 if ($_POST) {
-    \Stripe\Stripe::setApiKey("sk_test_M2T4OhPoG0Tax3JXdoZqAoBI");
+    \Stripe\Stripe::setApiKey($_ENV['STRIPE_API_SECRET']);
 
     try {
         if (!isset($_POST['stripeToken']))
@@ -15,7 +15,10 @@ if ($_POST) {
         \Stripe\Charge::create(array(
             "amount" => 1000,
             "currency" => "usd",
-            "card" => $_POST['stripeToken']));
+            "card" => $_POST['stripeToken'],
+            "receipt_email" => $_POST['receipt_email'],
+            "receipt_number" => $_POST['receipt_number']
+        ));
 
         $success = 'Your payment was successful.';
         echo $success;
@@ -24,4 +27,5 @@ if ($_POST) {
         $error = $e->getMessage();
     }
 }
+
 
