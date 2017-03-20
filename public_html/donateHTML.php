@@ -138,8 +138,8 @@
                     <input type="text" placeholder="City"           id="address_city"       style="width: 49%" />
                     <input type="text" placeholder="Province"       id="address_state"      style="width: 49%" />
                     <input type="text" placeholder="Country"        id="address_country"    style="width: 49%" />
-                    <input type="text" placeholder="Email"          id="receipt_email"  name="receipt_email" />
-                    <input type="text" placeholder="Phone Number"   id="receipt_number" name="receipt_number" />
+                    <input type="text" placeholder="Email"          name="receiptEmail" />
+                    <input type="text" placeholder="Phone Number"   name="receiptNumber" />
 
                     <h4>Card Details  <i class="fa fa-lock" style="padding-left: 3px"></i></h4>
 
