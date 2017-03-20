@@ -13,7 +13,7 @@ if ($_POST) {
             throw new Exception("The Stripe Token was not generated correctly");
 
         \Stripe\Charge::create(array(
-            "amount" => 1000,
+            "amount" => intval($_POST['amount']) * 100,
             "currency" => "usd",
             "card" => $_POST['stripeToken'],
             "receipt_email" => $_POST['receiptEmail']

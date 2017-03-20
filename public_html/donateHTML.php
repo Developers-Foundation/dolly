@@ -154,10 +154,10 @@
                         <input type="text" size="4" placeholder="Expiration - YYYY" id="card-expiry-year" style="width: 49%;"/>
                     </div>
                     <div class="form-row">
-                        <!--<input type="text"   name="amount"          placeholder="Donation Amount ($)" >-->
+                        <input type="text" name="amount" placeholder="Donation Amount ($)" >
                     </div>
                     <!--<input type="submit" name="submitButton" class="donate donatemodal-submit submit" value="Donate">-->
-                    <input type="submit" class="donate donatemodal-submit submit" id="submit-button" value="Submit 10$ Payment"/>
+                    <input type="submit" class="donate donatemodal-submit submit" id="submit-button" value="Donate"/>
 
                     <p>Your card will be charged only once, with the donation amount specified above.</p>
                 </form>
