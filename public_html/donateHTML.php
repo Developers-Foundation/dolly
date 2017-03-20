@@ -124,13 +124,14 @@
                     <a data-toggle="modal" data-target="#donate-modal"><i class="fa fa-times" style="font-size: 16px"></i></a>
                 </div>
 
-                <h1>Donate</h1><br>
+                <!-- to display errors returned by createToken -->
+                <span class="payment-errors"><?php $error ?></span>
+                <span class="payment-success"><?php $success ?></span>
+                <form action="assets/stripe/stripe.php" method="post" id="payment-form">
+                    <h1>Donate</h1><br>
 
-<!--                <form action="assets/stripe/stripe.php" method="post" id="payment-form">-->
-<!--                    <p class="payment-errors"></p>-->
-<!---->
-<!--                    <h4>Contact Information</h4>-->
-<!---->
+                    <h4>Contact Information</h4>
+
 <!--                    <input type="hidden" name="type" value="donate">-->
 <!--                    <input type="text" name="name"            placeholder="Full Name"    data-stripe="name">-->
 <!--                    <input type="text" name="address_line1"   placeholder="Address"      data-stripe="address_line1">-->
@@ -140,40 +141,27 @@
 <!--                    <input type="text" name="address_country" placeholder="Country"      data-stripe="address_country" style="width: 49%">-->
 <!--                    <input type="text" name="receipt_email"   placeholder="Email">-->
 <!--                    <input type="text" name="receipt_number"  placeholder="Phone Number">-->
-<!--                    -->
-<!--                    <h4>Card Details  <i class="fa fa-lock" style="padding-left: 3px"></i></h4>-->
-<!--                    -->
-<!--                    <input type="text"   name="cardnumber"      placeholder="Card Number"       data-stripe="number">-->
-<!--                    <input type="text"   name="exp_month"       placeholder="Expiration - MM"   data-stripe="exp_month" style="width: 49%;">-->
-<!--                    <input type="text"   name="exp_year"        placeholder="Expiration - YY"   data-stripe="exp_year"  style="width: 49%;">-->
-<!--                    <input type="text"   name="cvc"             placeholder="CVC"               data-stripe="cvc">-->
-<!--                    <input type="text"   name="amount"          placeholder="Donation Amount ($)" >-->
-<!--                    <input type="submit" name="submitButton" class="donate donatemodal-submit submit" value="Donate">-->
-<!--                    <p>Your card will be charged only once, with the donation amount specified above.</p>-->
-<!---->
-<!--                </form>-->
-<!--                <span class="payment-errors"></span>-->
 
-                <h1>Charge $10 with Stripe</h1>
-                <!-- to display errors returned by createToken -->
-                <span class="payment-errors"><?php $error ?></span>
-                <span class="payment-success"><?php $success ?></span>
-                <form action="assets/stripe/stripe.php" method="POST" id="payment-form">
+                    <h4>Card Details  <i class="fa fa-lock" style="padding-left: 3px"></i></h4>
+
+
                     <div class="form-row">
-                        <label>Card Number</label>
-                        <input type="text" size="20" autocomplete="off" class="card-number" />
+                        <input type="text" size="20" autocomplete="off" placeholder="Card Number" id="card-number" />
                     </div>
                     <div class="form-row">
-                        <label>CVC</label>
-                        <input type="text" size="4" autocomplete="off" class="card-cvc" />
+                        <input type="text" size="4" autocomplete="off" placeholder="CVC" id="card-cvc" />
                     </div>
                     <div class="form-row">
-                        <label>Expiration (MM/YYYY)</label>
-                        <input type="text" size="2" class="card-expiry-month"/>
-                        <span> / </span>
-                        <input type="text" size="4" class="card-expiry-year"/>
+                        <input type="text" size="2" placeholder="Expiration - MM" id="card-expiry-month" style="width: 49%;"/>
+                        <input type="text" size="4" placeholder="Expiration - YYYY" id="card-expiry-year" style="width: 49%;"/>
                     </div>
-                    <button type="submit" class="submit-button">Submit Payment</button>
+                    <div class="form-row">
+                        <!--<input type="text"   name="amount"          placeholder="Donation Amount ($)" >-->
+                    </div>
+                    <!--<input type="submit" name="submitButton" class="donate donatemodal-submit submit" value="Donate">-->
+                    <input type="submit" class="donate donatemodal-submit submit" id="submit-button" value="Submit 10$ Payment"/>
+
+                    <p>Your card will be charged only once, with the donation amount specified above.</p>
                 </form>
 
                 <div class="donate-help">
