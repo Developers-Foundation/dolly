@@ -125,8 +125,8 @@
                 </div>
 
                 <!-- to display errors returned by createToken -->
-                <span class="payment-errors"><?php $error ?></span>
-                <span class="payment-success"><?php $success ?></span>
+                <span class="payment-errors"><?php echo $error ?></span>
+                <span class="payment-success"><?php echo $success ?></span>
                 <form action="assets/stripe/stripe.php" method="post" id="payment-form">
                     <h1>Donate</h1><br>
 
