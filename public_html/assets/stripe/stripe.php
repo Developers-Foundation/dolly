@@ -12,16 +12,11 @@ if ($_POST) {
         if (!isset($_POST['stripeToken']))
             throw new Exception("The Stripe Token was not generated correctly");
 
-        echo $_POST['receiptEmail'];
-
         \Stripe\Charge::create(array(
             "amount" => 1000,
             "currency" => "usd",
             "card" => $_POST['stripeToken'],
-            "metadata" => array(
-                "receipt_email" => $_POST['receiptEmail'],
-                "receipt_number" => $_POST['receiptNumber']
-            )
+            "receipt_email" => $_POST['receiptEmail']
         ));
 
         $success = 'Your payment was successful.';
