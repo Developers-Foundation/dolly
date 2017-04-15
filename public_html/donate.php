@@ -138,6 +138,7 @@ $page = "donate";
                     </div>
 
                     <form action="/charge" method="post" id="donate-form">
+                        <input type="hidden" name="type" value="donation" />
                         <div class="form-heading"><h1>Donate</h1></div>
 
                         <div class="group">
@@ -213,7 +214,7 @@ $page = "donate";
 <!--                        <!--<input type="submit" name="submitButton" class="donate donatemodal-submit submit" value="Donate">-->-->
 <!--                        <input type="submit" class="donate donatemodal-submit submit" id="submit-button"-->
 <!--                               value="Donate"/>-->
-<!---->
+<!-- -->
 <!--                        <p>Your card will be charged only once, with the donation amount specified above.</p>-->
 <!--                    </form>-->
 
@@ -263,7 +264,7 @@ $page = "donate";
         <!--                <span class="payment-errors"></span>-->
         <!---->
         <!--                <div class="donate-help">-->
-        <!--                    <!--                    <a href="#">Help</a>-->-->
+        <!--                    <!--                    <a href="#">Help</a>-->
         <!--                </div>-->
         <!--            </div>-->
         <!--        </div>-->
