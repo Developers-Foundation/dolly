@@ -4,6 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+    "hash": "400fd6a992f25926e1b5018725825c80",
     "content-hash": "0ea38f716e0cc76ab58a85784d55a695",
     "packages": [
         {
@@ -100,7 +101,7 @@
                 "web service"
             ],
             "abandoned": "guzzlehttp/guzzle",
-            "time": "2015-03-18T18:23:50+00:00"
+            "time": "2015-03-18 18:23:50"
         },
         {
             "name": "sendgrid/sendgrid",
@@ -147,7 +148,7 @@
                 "send",
                 "sendgrid"
             ],
-            "time": "2016-02-18T21:40:14+00:00"
+            "time": "2016-02-18 21:40:14"
         },
         {
             "name": "sendgrid/smtpapi",
@@ -195,7 +196,7 @@
                 "smtpapi",
                 "xsmtp"
             ],
-            "time": "2015-04-14T02:37:45+00:00"
+            "time": "2015-04-14 02:37:45"
         },
         {
             "name": "stripe/stripe-php",
@@ -250,20 +251,20 @@
                 "payment processing",
                 "stripe"
             ],
-            "time": "2017-02-27T15:48:36+00:00"
+            "time": "2017-02-27 15:48:36"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.8.16",
+            "version": "v2.8.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "74877977f90fb9c3e46378d5764217c55f32df34"
+                "reference": "88b65f0ac25355090e524aba4ceb066025df8bd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/74877977f90fb9c3e46378d5764217c55f32df34",
-                "reference": "74877977f90fb9c3e46378d5764217c55f32df34",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/88b65f0ac25355090e524aba4ceb066025df8bd2",
+                "reference": "88b65f0ac25355090e524aba4ceb066025df8bd2",
                 "shasum": ""
             },
             "require": {
@@ -271,7 +272,7 @@
             },
             "require-dev": {
                 "psr/log": "~1.0",
-                "symfony/config": "~2.0,>=2.0.5|~3.0.0",
+                "symfony/config": "^2.0.5|~3.0.0",
                 "symfony/dependency-injection": "~2.6|~3.0.0",
                 "symfony/expression-language": "~2.6|~3.0.0",
                 "symfony/stopwatch": "~2.3|~3.0.0"
@@ -310,7 +311,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2017-01-02T20:30:24+00:00"
+            "time": "2017-04-03 20:37:06"
         }
     ],
     "packages-dev": [],
