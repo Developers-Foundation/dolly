@@ -10,7 +10,7 @@ include_once("header.php");
                     <h1>Join the Journey!</h1>
                     <p>Inspiring the African Child through educational aids and interventions centered on mental and
                         intellectual programs.</p>
-                    <a href="donate.php">
+                    <a href="/donate">
                         <button class="btn donatebutton">
                             Donate
                         </button>
@@ -55,7 +55,7 @@ include_once("header.php");
                 </p>
             </div>
             <div class="col-md-12 text-center">
-                <a href="about.php">
+                <a href="/about">
                     <button class="btn learnMore">Learn More</button>
                 </a>
             </div>
@@ -67,7 +67,7 @@ include_once("header.php");
             <div class="col-md-offset-1 col-md-4 text-center">
                 <div class="whiteBG">
                     <p><b>Send us your questions, or request for any additional information.</b></p>
-                    <a href="contact.php">
+                    <a href="/contact">
                         <button class="btn email">Email Us</button>
                     </a>
 

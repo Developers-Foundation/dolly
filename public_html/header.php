@@ -51,7 +51,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="index.php" class="navbar-brand navbar-left"><img src="assets/img/main/logo.png"></a>
+            <a href="https://dollychildren.org/" class="navbar-brand navbar-left"><img src="assets/img/main/logo.png"></a>
 
         </div>
 
@@ -59,13 +59,13 @@
         <div class="collapse navbar-collapse mobilesize" id="navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right container-set">
                 <li>
-                    <a href="about.php" class="page-scroll navTitle">About Us</a>
+                    <a href="/about" class="page-scroll navTitle">About Us</a>
                 </li>
                 <li>
-                    <a href="contact.php" class="page-scroll navTitle">Contact Us</a>
+                    <a href="/contact" class="page-scroll navTitle">Contact Us</a>
                 </li>
                 <li>
-                    <a href="donate.php" class="page-scroll" style="padding: 0;">
+                    <a href="/donate" class="page-scroll" style="padding: 0;">
                         <button class="btn donatebutton">Donate</button>
                     </a>
                 </li>
