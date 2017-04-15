@@ -29,5 +29,11 @@
 <script src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="assets/js/main.js" type="text/javascript"></script>
+<script src="https://js.stripe.com/v3/"></script>
+
+<?php
+if (isset($page) && $page == "donate")
+    echo "<script type=\"text/javascript\" src=\"./assets/js/stripe3.js\"></script>";
+?>
 
 </html>
