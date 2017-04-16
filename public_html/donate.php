@@ -137,89 +137,91 @@ $page = "donate";
                                                                               style="font-size: 16px"></i></a>
                     </div>
 
-                    <form action="/charge" method="post" id="donate-form">
-                        <input type="hidden" name="type" value="donation" />
-                        <div class="form-heading"><h1>Donate</h1></div>
+                    <div class="modal-header"><h1>Donate</h1></div>
 
-                        <div class="group">
-                            <label>
-                                <span>Name</span>
-                                <input name="cardholder-name" class="field" placeholder="Jane Doe" />
-                            </label>
-                            <label>
-                                <span>Phone</span>
-                                <input class="field" placeholder="(123) 456-7890" type="tel" />
-                            </label>
-                            <label>
-                                <span>ZIP code</span>
-                                <input name="address-zip" class="field" placeholder="94110" />
-                            </label>
-                            <label>
-                                <span>Credit or debit card</span>
-                                <div id="card-element"></div>
-                                <div id="card-errors"></div>
-                            </label>
-                        </div>
-
-                        <div class="group">
-                            <label>
-                                <span>Amount</span>
-                                <input name="donate-amount" class="field" placeholder="20" type="number" />
-                            </label>
-                        </div>
-                        <button>Submit Payment</button>
-
-                        <div class="outcome">
-                            <div class="error"></div>
-                            <div class="success">
-                                Success! Your Stripe token is <span class="token"></span>
+                    <div class="modal-body">
+                        <form action="assets/stripe/stripe.php" method="post" id="donate-form">
+                            <input type="hidden" name="type" value="donation"/>
+                            <div class="group">
+                                <label>
+                                    <span>Name</span>
+                                    <input name="cardholder-name" class="field" placeholder="Jane Doe"/>
+                                </label>
+                                <label>
+                                    <span>Phone</span>
+                                    <input name="phone-number" class="field" placeholder="(123) 456-7890" type="tel"/>
+                                </label>
+                                <label>
+                                    <span>ZIP code</span>
+                                    <input name="address-zip" class="field" placeholder="94110"/>
+                                </label>
+                                <label>
+                                    <span>Credit card</span>
+                                    <div id="card-element" class="field"></div>
+                                    <div id="card-errors"></div>
+                                </label>
                             </div>
+
+                            <div class="group">
+                                <label>
+                                    <span>Amount</span>
+                                    <input name="donate-amount" class="field" placeholder="USD" type="number"/>
+                                </label>
+                            </div>
+                            <button>Submit Donation</button>
+
+                            <div class="outcome">
+                                <div class="error"></div>
+                                <div class="success">
+                                    Success! Your Stripe token is <span class="token"></span>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- to display errors returned by createToken -->
+                        <!--                    <span class="payment-errors">--><?php //echo $error ?><!--</span>-->
+                        <!--                    <span class="payment-success">--><?php //echo $success ?><!--</span>-->
+                        <!--                    <form action="assets/stripe/stripe.php" method="post" id="payment-form">-->
+                        <!--                        <h1>Donate</h1><br>-->
+                        <!---->
+                        <!--                        <h4>Contact Information</h4>-->
+                        <!---->
+                        <!--                        <input type="text" placeholder="Full Name" id="customer_name"/>-->
+                        <!--                        <input type="text" placeholder="Address" id="address_line1"/>-->
+                        <!--                        <input type="text" placeholder="Postal Code" id="address_zip" style="width: 49%"/>-->
+                        <!--                        <input type="text" placeholder="City" id="address_city" style="width: 49%"/>-->
+                        <!--                        <input type="text" placeholder="Province" id="address_state" style="width: 49%"/>-->
+                        <!--                        <input type="text" placeholder="Country" id="address_country" style="width: 49%"/>-->
+                        <!--                        <input type="text" placeholder="Email" name="receiptEmail"/>-->
+                        <!---->
+                        <!--                        <h4>Card Details <i class="fa fa-lock" style="padding-left: 3px"></i></h4>-->
+                        <!---->
+                        <!---->
+                        <!--                        <div class="form-row">-->
+                        <!--                            <input type="text" size="20" autocomplete="off" placeholder="Card Number" id="card-number"/>-->
+                        <!--                        </div>-->
+                        <!--                        <div class="form-row">-->
+                        <!--                            <input type="text" size="4" autocomplete="off" placeholder="CVC" id="card-cvc"/>-->
+                        <!--                        </div>-->
+                        <!--                        <div class="form-row">-->
+                        <!--                            <input type="text" size="2" placeholder="Expiration - MM" id="card-expiry-month"-->
+                        <!--                                   style="width: 49%;"/>-->
+                        <!--                            <input type="text" size="4" placeholder="Expiration - YYYY" id="card-expiry-year"-->
+                        <!--                                   style="width: 49%;"/>-->
+                        <!--                        </div>-->
+                        <!--                        <div class="form-row">-->
+                        <!--                            <input type="text" name="amount" placeholder="Donation Amount ($)">-->
+                        <!--                        </div>-->
+                        <!--                        <!--<input type="submit" name="submitButton" class="donate donatemodal-submit submit" value="Donate">-->
+                        <!--                        <input type="submit" class="donate donatemodal-submit submit" id="submit-button"-->
+                        <!--                               value="Donate"/>-->
+                        <!-- -->
+                        <!--                        <p>Your card will be charged only once, with the donation amount specified above.</p>-->
+                        <!--                    </form>-->
+
+                        <div class="donate-help">
+                            <!--                    <a href="#">Help</a>-->
                         </div>
-                    </form>
-
-                    <!-- to display errors returned by createToken -->
-<!--                    <span class="payment-errors">--><?php //echo $error ?><!--</span>-->
-<!--                    <span class="payment-success">--><?php //echo $success ?><!--</span>-->
-<!--                    <form action="assets/stripe/stripe.php" method="post" id="payment-form">-->
-<!--                        <h1>Donate</h1><br>-->
-<!---->
-<!--                        <h4>Contact Information</h4>-->
-<!---->
-<!--                        <input type="text" placeholder="Full Name" id="customer_name"/>-->
-<!--                        <input type="text" placeholder="Address" id="address_line1"/>-->
-<!--                        <input type="text" placeholder="Postal Code" id="address_zip" style="width: 49%"/>-->
-<!--                        <input type="text" placeholder="City" id="address_city" style="width: 49%"/>-->
-<!--                        <input type="text" placeholder="Province" id="address_state" style="width: 49%"/>-->
-<!--                        <input type="text" placeholder="Country" id="address_country" style="width: 49%"/>-->
-<!--                        <input type="text" placeholder="Email" name="receiptEmail"/>-->
-<!---->
-<!--                        <h4>Card Details <i class="fa fa-lock" style="padding-left: 3px"></i></h4>-->
-<!---->
-<!---->
-<!--                        <div class="form-row">-->
-<!--                            <input type="text" size="20" autocomplete="off" placeholder="Card Number" id="card-number"/>-->
-<!--                        </div>-->
-<!--                        <div class="form-row">-->
-<!--                            <input type="text" size="4" autocomplete="off" placeholder="CVC" id="card-cvc"/>-->
-<!--                        </div>-->
-<!--                        <div class="form-row">-->
-<!--                            <input type="text" size="2" placeholder="Expiration - MM" id="card-expiry-month"-->
-<!--                                   style="width: 49%;"/>-->
-<!--                            <input type="text" size="4" placeholder="Expiration - YYYY" id="card-expiry-year"-->
-<!--                                   style="width: 49%;"/>-->
-<!--                        </div>-->
-<!--                        <div class="form-row">-->
-<!--                            <input type="text" name="amount" placeholder="Donation Amount ($)">-->
-<!--                        </div>-->
-<!--                        <!--<input type="submit" name="submitButton" class="donate donatemodal-submit submit" value="Donate">-->-->
-<!--                        <input type="submit" class="donate donatemodal-submit submit" id="submit-button"-->
-<!--                               value="Donate"/>-->
-<!-- -->
-<!--                        <p>Your card will be charged only once, with the donation amount specified above.</p>-->
-<!--                    </form>-->
-
-                    <div class="donate-help">
-                        <!--                    <a href="#">Help</a>-->
                     </div>
                 </div>
             </div>
@@ -274,7 +276,7 @@ $page = "donate";
                 src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
                 integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
                 crossorigin="anonymous"></script>
-<!--        <script type="text/javascript" src="./assets/js/stripe.js"></script>-->
+        <!--        <script type="text/javascript" src="./assets/js/stripe.js"></script>-->
 
     </div>
 

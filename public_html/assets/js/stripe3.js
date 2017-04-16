@@ -16,12 +16,12 @@ $(document).ready(function() {
     };
 
     // Create an instance of the card Element
-    var card = elements.create('card', {style: style});
+    var card = elements.create('card', {style: style, hidePostalCode: true});
 
     // Add an instance of the card Element into the `card-element` <div>
     card.mount('#card-element');
 
-    function setOutcome(result) {
+    function setOutcome(result, form) {
         var successElement = document.querySelector('.success');
         var errorElement = document.querySelector('.error');
         successElement.classList.remove('visible');
@@ -30,8 +30,11 @@ $(document).ready(function() {
         if (result.token) {
             // Use the token to create a charge or a customer
             // https://stripe.com/docs/charges
-            successElement.querySelector('.token').textContent = result.token.id;
-            successElement.classList.add('visible');
+
+            console.log(form);
+            form.submit();
+            //successElement.querySelector('.token').textContent = result.token.id;
+            //successElement.classList.add('visible');
         } else if (result.error) {
             errorElement.textContent = result.error.message;
             errorElement.classList.add('visible');
@@ -47,8 +50,9 @@ $(document).ready(function() {
         var form = document.querySelector('form');
         var extraDetails = {
             name: form.querySelector('input[name=cardholder-name]').value,
-            address_zip: form.querySelector('input[name=address-zip]').value
+            address_zip: form.querySelector('input[name=address-zip]').value,
+            phone_number: form.querySelector('input[name=phone-number]').value
         };
-        stripe.createToken(card, extraDetails).then(setOutcome);
+        stripe.createToken(card, extraDetails).then(function(a){setOutcome(a, form)});
     });
 });
