@@ -18,7 +18,7 @@ Stripe::setApiKey($_ENV['STRIPE_API_SECRET']);
 
 try {
     ParseClient::initialize($_ENV["DB_APP_ID"], "", $_ENV["DB_MASTER_KEY"]);
-    ParseClient::setServerURL($_ENV["DB_SERVER_URL"]);
+    ParseClient::setServerURL($_ENV["DB_SERVER_URL"], "/parse");
 
     if ($_POST['donation-type'] == "donation") {
         if (!isset($_POST['stripeToken']))
