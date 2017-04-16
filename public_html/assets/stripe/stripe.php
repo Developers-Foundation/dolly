@@ -14,7 +14,8 @@ $success = 'success';
 Stripe::setApiKey($_ENV['STRIPE_API_SECRET']);
 
 try {
-    if ($_POST['type'] == 'donation') {
+    var_dump($_POST);
+    if ($_POST['donation-type'] == "donation") {
         if (!isset($_POST['stripeToken']))
             throw new Exception("The Stripe Token was not generated correctly");
         $token = $_POST['stripeToken'];

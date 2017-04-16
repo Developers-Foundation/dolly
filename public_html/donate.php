@@ -141,7 +141,7 @@ $page = "donate";
 
                     <div class="modal-body">
                         <form action="assets/stripe/stripe.php" method="post" id="donate-form">
-                            <input type="hidden" name="type" value="donation"/>
+                            <input type="hidden" name="donation-type" value="donation"/>
                             <div class="group">
                                 <label>
                                     <span>Name</span>
@@ -152,7 +152,7 @@ $page = "donate";
                                     <input name="phone-number" class="field" placeholder="(123) 456-7890" type="tel"/>
                                 </label>
                                 <label>
-                                    <span>ZIP code</span>
+                                    <span>Postal code</span>
                                     <input name="address-zip" class="field" placeholder="94110"/>
                                 </label>
                                 <label>
