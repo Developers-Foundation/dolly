@@ -34,7 +34,7 @@ $(document).ready(function() {
             var hiddenInput = document.createElement('input');
             hiddenInput.setAttribute('type', 'hidden');
             hiddenInput.setAttribute('name', 'stripeToken');
-            hiddenInput.setAttribute('value', token.id);
+            hiddenInput.setAttribute('value', result.token.id);
             form.appendChild(hiddenInput);
             form.submit();
             //successElement.querySelector('.token').textContent = result.token.id;
