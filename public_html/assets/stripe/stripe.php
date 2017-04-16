@@ -32,14 +32,6 @@ try {
         $addressZip = $_POST['address-zip'];
         $amount = intval($_POST['donate-amount']);
 
-        $charge = Charge::create(array(
-            "amount" => $amount * 100,
-            "currency" => "usd",
-            "description" => "Donation",
-            "source" => $token,
-            "receipt_email" => $_POST['email-address']
-        ));
-
         ParseUser::logIn($_ENV["DB_USER"], $_ENV["DB_PASS"]);
         $donation = new ParseObject("Donation");
         $donation->set("type", $type);
@@ -55,6 +47,16 @@ try {
         } catch (ParseException $ex) {
             throw new Exception("Failed to submit to db: " . $ex.get_message());
         }
+
+        ParseUser::logOut();
+
+        $charge = Charge::create(array(
+            "amount" => $amount * 100,
+            "currency" => "usd",
+            "description" => "Donation",
+            "source" => $token,
+            "receipt_email" => $_POST['email-address']
+        ));
 
         $success = 'Your donation was successfully received. Thank You.';
         echo "{'success': true,'message': '" . $success . "'}";
