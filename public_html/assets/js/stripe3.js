@@ -31,7 +31,11 @@ $(document).ready(function() {
             // Use the token to create a charge or a customer
             // https://stripe.com/docs/charges
 
-            console.log(form);
+            var hiddenInput = document.createElement('input');
+            hiddenInput.setAttribute('type', 'hidden');
+            hiddenInput.setAttribute('name', 'stripeToken');
+            hiddenInput.setAttribute('value', token.id);
+            form.appendChild(hiddenInput);
             form.submit();
             //successElement.querySelector('.token').textContent = result.token.id;
             //successElement.classList.add('visible');

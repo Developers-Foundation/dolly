@@ -152,6 +152,10 @@ $page = "donate";
                                     <input name="phone-number" class="field" placeholder="(123) 456-7890" type="tel"/>
                                 </label>
                                 <label>
+                                    <span>Email address</span>
+                                    <input name="email-address" class="field" placeholder="jane@doe.com" type="email"/>
+                                </label>
+                                <label>
                                     <span>Postal code</span>
                                     <input name="address-zip" class="field" placeholder="94110"/>
                                 </label>

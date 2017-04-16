@@ -18,20 +18,30 @@ try {
     if ($_POST['donation-type'] == "donation") {
         if (!isset($_POST['stripeToken']))
             throw new Exception("The Stripe Token was not generated correctly");
+
+        $type = $_POST['donation-type'];
         $token = $_POST['stripeToken'];
+        $name = $_POST['cardholder-name'];
+        $phone = $_POST['phone-number'];
+        $email = $_POST['email-address'];
+        $addressZip = $_POST['address-zip'];
+        $amount = intval($_POST['donate-amount']);
 
         $charge = Charge::create(array(
-            "amount" => intval($_POST['amount']) * 100,
+            "amount" => $amount * 100,
             "currency" => "usd",
             "description" => "Donation",
             "source" => $token,
-            "receipt_email" => $_POST['receiptEmail']
+            "receipt_email" => $_POST['email-address']
         ));
+
+        var_dump($charge);
 
         $success = 'Your payment was successful.';
         echo "{'success': true,'message': " . $success . "}";
     }
 } catch (Exception $e) {
+    echo $error;
     $error = $e->getMessage();
 }
 
