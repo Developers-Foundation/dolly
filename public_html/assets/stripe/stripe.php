@@ -57,9 +57,9 @@ try {
         }
 
         $success = 'Your donation was successfully received. Thank You.';
-        echo "{'success': true,'message': " . $success . "}";
+        echo "{'success': true,'message': '" . $success . "'}";
     }
 } catch (Exception $e) {
-    echo "{'success': false,'message': " . $e . "}";
+    echo "{'success': false,'message': '" . $e . "'}";
 }
 
