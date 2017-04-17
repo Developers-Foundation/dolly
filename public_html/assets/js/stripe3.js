@@ -35,8 +35,28 @@ $(document).ready(function() {
             hiddenInput.setAttribute('type', 'hidden');
             hiddenInput.setAttribute('name', 'stripeToken');
             hiddenInput.setAttribute('value', result.token.id);
-            form.appendChild(hiddenInput);
-            form.submit();
+            form.append(hiddenInput);
+
+            var dataString = form.serialize();
+
+            // TODO: Change to ajax submit so the thing can be a little more smart
+            // form.submit();
+            $.ajax({
+                type 		: 'POST',
+                url 		: 'assets/stripe/stripe.php',
+                data 		: dataString,
+                success     : function(data){
+                    alert('success \n' + data);
+                },
+                error       : function(data){
+                    alert('error \n' + data);
+                }
+            });
+
+
+
+
+
             //successElement.querySelector('.token').textContent = result.token.id;
             //successElement.classList.add('visible');
         } else if (result.error) {
@@ -51,11 +71,11 @@ $(document).ready(function() {
 
     document.querySelector('form').addEventListener('submit', function(e) {
         e.preventDefault();
-        var form = document.querySelector('form');
+        var form = $('#donate-form');
         var extraDetails = {
-            name: form.querySelector('input[name=cardholder-name]').value,
-            address_zip: form.querySelector('input[name=address-zip]').value,
-            phone_number: form.querySelector('input[name=phone-number]').value
+            name: $('input[name=cardholder-name]').value,
+            address_zip: $('input[name=address-zip]').value,
+            phone_number: $('input[name=phone-number]').value
         };
         stripe.createToken(card, extraDetails).then(function(a){setOutcome(a, form)});
     });

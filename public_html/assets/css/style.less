@@ -57,50 +57,63 @@ footer {
   background-color: #f5a623;
 }
 
-#whatwedo h1 {
-  margin: 50px;
-  font-size: 48px;
-  font-weight: 500;
-  color: #4a4a4a;
-}
+#whatwedo {
+  h1 {
+    margin: 50px;
+    font-size: 48px;
+    font-weight: 500;
+    color: #4a4a4a;
+  }
 
-#whatwedo p {
-  font-size: 20px;
-  font-weight: 500;
-  text-align: center;
-  color: #757573;
+  p {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #757573;
+  }
 }
 
 #journey {
   background-image: url("../img/main/journey.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-}
 
-#journey p {
-  padding: 15px 80px;
-  font-size: 24px;
-  font-weight: 500;
-  color: #ffffff;
-  text-shadow: 1px 1px #aaa;
-}
+  p {
+    padding: 15px 80px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #ffffff;
+    text-shadow: 1px 1px #aaa;
+  }
 
-#journey hr {
-  margin-top: 0;
-  margin-bottom: 0;
-  width: 190px;
-  border: solid 1px #ffffff;
-  text-shadow: 1px 1px #aaa;
-}
+  hr {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 190px;
+    border: solid 1px #ffffff;
+    text-shadow: 1px 1px #aaa;
+  }
 
-#journey h1 {
-  margin-top: 10px;
-  /*padding-bottom: 25px;*/
-  font-size: 64px;
-  font-weight: 800;
-  font-stretch: condensed;
-  color: #ffffff;
-  /*text-shadow: 1px 1px #aaa;*/
+  h1 {
+    margin-top: 10px;
+    /*padding-bottom: 25px;*/
+    font-size: 64px;
+    font-weight: 800;
+    font-stretch: condensed;
+    color: #ffffff;
+    /*text-shadow: 1px 1px #aaa;*/
+  }
+
+  a {
+    font-size: 24px;
+    font-weight: 800;
+    font-stretch: condensed;
+    color: #ffffff;
+  }
+
+  button {
+    margin-bottom: 50px;
+  }
 }
 
 .whiteBG {
@@ -128,17 +141,6 @@ footer {
   color: #ffffff;
 }
 
-#journey a {
-  font-size: 24px;
-  font-weight: 800;
-  font-stretch: condensed;
-  color: #ffffff;
-}
-
-#journey button {
-  margin-bottom: 50px;
-}
-
 .learnMore {
   width: 168px;
   height: 55px;
@@ -149,13 +151,13 @@ footer {
   margin-top: 50px;
   font-size: 20px;
   color: #f5a623;
-}
 
-.learnMore a {
-  font-family: Calibri, sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  color: #f5a623;
+  a {
+    font-family: Calibri, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #f5a623;
+  }
 }
 
 .vline {
@@ -167,20 +169,20 @@ footer {
   background-image: url("../img/main/email.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-}
 
-#emailus p {
-  font-size: 24px;
-  font-weight: 500;
-  color: #4d4c4d;
-  padding: 20px 25px;
-}
+  p {
+    font-size: 24px;
+    font-weight: 500;
+    color: #4d4c4d;
+    padding: 20px 25px;
+  }
 
-#emailus a {
-  font-size: 24px;
-  font-weight: 800;
-  font-stretch: condensed;
-  color: #ffffff;
+  a {
+    font-size: 24px;
+    font-weight: 800;
+    font-stretch: condensed;
+    color: #ffffff;
+  }
 }
 
 .email {
@@ -193,10 +195,8 @@ footer {
   font-size: 20px;
 }
 
-.modal-dialog .heading
-
 /* ============================================== CONTACT US ================================================= */
-
+// TODO: Fix all these selectors so that they are not a mess -.- testing rebase lol, testing rebase mk 3 testing rebase mk 4
 /* IMAGE */
 .contactusBG {
   position: relative;
@@ -340,11 +340,11 @@ footer {
   background-color: #F3A536;
   text-align: center;
   padding: 95px 0 110px 0;
-}
 
-.ourMission h1 {
-  font-size: 43px;
-  letter-spacing: normal;
+  h1 {
+    font-size: 43px;
+    letter-spacing: normal;
+  }
 }
 
 .ourMission p,
@@ -584,8 +584,8 @@ footer {
 
   .group {
     background: white;
-    box-shadow: 0 7px 14px 0 rgba(49,49,93,0.10),
-    0 3px 6px 0 rgba(0,0,0,0.08);
+    box-shadow: 0 7px 14px 0 rgba(49, 49, 93, 0.10),
+    0 3px 6px 0 rgba(0, 0, 0, 0.08);
     border-radius: 4px;
     margin-bottom: 20px;
   }
@@ -624,17 +624,23 @@ footer {
     float: right;
   }
 
-  .field::-webkit-input-placeholder { color: #CFD7E0; }
-  .field::-moz-placeholder { color: #CFD7E0; }
-  .field:-ms-input-placeholder { color: #CFD7E0; }
+  .field::-webkit-input-placeholder {
+    color: #CFD7E0;
+  }
+  .field::-moz-placeholder {
+    color: #CFD7E0;
+  }
+  .field:-ms-input-placeholder {
+    color: #CFD7E0;
+  }
 
   button {
     float: left;
     display: block;
     background: #666EE8;
     color: white;
-    box-shadow: 0 7px 14px 0 rgba(49,49,93,0.10),
-    0 3px 6px 0 rgba(0,0,0,0.08);
+    box-shadow: 0 7px 14px 0 rgba(49, 49, 93, 0.10),
+    0 3px 6px 0 rgba(0, 0, 0, 0.08);
     border-radius: 4px;
     border: 0;
     margin-top: 20px;

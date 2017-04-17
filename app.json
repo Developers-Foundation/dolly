@@ -1,0 +1,64 @@
+{
+  "name": "dollychildrenfoundation",
+  "description": "Dolly's Children Foundation",
+  "scripts": {
+  },
+  "env": {
+    "DB_APP_ID": {
+      "required": true
+    },
+    "DB_MASTER_KEY": {
+      "required": true
+    },
+    "DB_PASS": {
+      "required": true
+    },
+    "DB_SERVER_URL": {
+      "required": true
+    },
+    "DB_USER": {
+      "required": true
+    },
+    "MAILGUN_API_KEY": {
+      "required": true
+    },
+    "MAILGUN_DOMAIN": {
+      "required": true
+    },
+    "MAILGUN_PUBLIC_KEY": {
+      "required": true
+    },
+    "MAILGUN_SMTP_LOGIN": {
+      "required": true
+    },
+    "MAILGUN_SMTP_PASSWORD": {
+      "required": true
+    },
+    "MAILGUN_SMTP_PORT": {
+      "required": true
+    },
+    "MAILGUN_SMTP_SERVER": {
+      "required": true
+    },
+    "PAPERTRAIL_API_TOKEN": {
+      "required": true
+    },
+    "SENDGRID_API_KEY": {
+      "required": true
+    },
+    "STRIPE_API_SECRET": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+    "mailgun",
+    "papertrail"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/php"
+    }
+  ]
+}

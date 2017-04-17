@@ -91,6 +91,15 @@ footer {
   color: #ffffff;
   /*text-shadow: 1px 1px #aaa;*/
 }
+#journey a {
+  font-size: 24px;
+  font-weight: 800;
+  font-stretch: condensed;
+  color: #ffffff;
+}
+#journey button {
+  margin-bottom: 50px;
+}
 .whiteBG {
   margin: 170px 25px 150px 25px;
   border-radius: 10px;
@@ -112,15 +121,6 @@ footer {
   font-size: 20px;
   font-weight: normal;
   color: #ffffff;
-}
-#journey a {
-  font-size: 24px;
-  font-weight: 800;
-  font-stretch: condensed;
-  color: #ffffff;
-}
-#journey button {
-  margin-bottom: 50px;
 }
 .learnMore {
   width: 168px;
@@ -169,7 +169,9 @@ footer {
   margin: 0 0 20px 0;
   font-size: 20px;
 }
-.modal-dialog .heading .contactusBG {
+/* ============================================== CONTACT US ================================================= */
+/* IMAGE */
+.contactusBG {
   position: relative;
   background-position: 50% 0;
   background-repeat: no-repeat;

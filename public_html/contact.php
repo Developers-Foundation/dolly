@@ -8,10 +8,9 @@ include_once("header.php");
                 <!--            <div class="captionRectangle"></div>-->
             </div>
         </div>
-
         <div class="container contactForm">
             <div class="row">
-                <p>Please don’t hesitate to get in touch with us. We will get back to you as soon as we can.</p>
+                <p>Please don't hesitate to get in touch with us. We will get back to you as soon as we can.</p>
             </div>
             <div class="row form-group">
                 <form class="form-email" action="" method="post" data-form-type="nob">
