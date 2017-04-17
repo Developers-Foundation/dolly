@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 $error = 'error';
 $success = 'success';
 
-Stripe::setApiKey($_ENV['STRIPE_API_SECRET']);
+Stripe::setApiKey($_ENV['STRIPE_API_SECRET_ALEX']);
 
 try {
     ParseClient::initialize($_ENV["DB_APP_ID"], "", $_ENV["DB_MASTER_KEY"]);

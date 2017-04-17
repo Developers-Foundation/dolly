@@ -3,7 +3,7 @@
  */
 
 $(document).ready(function() {
-    var stripe = Stripe('pk_test_QChjrSlxnapDTftVFe5aHKmy');
+    var stripe = Stripe('pk_test_QDYPRtpiEelxK6ZQdope0gT0');
     var elements = stripe.elements();
 
     // Custom styling can be passed to options when creating an Element.
