@@ -169,7 +169,9 @@ footer {
   margin: 0 0 20px 0;
   font-size: 20px;
 }
-.modal-dialog .heading .contactusBG {
+/* ============================================== CONTACT US ================================================= */
+/* IMAGE */
+.contactusBG {
   position: relative;
   background-position: 50% 0;
   background-repeat: no-repeat;
