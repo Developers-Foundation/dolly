@@ -48,9 +48,6 @@
     },
     "STRIPE_API_SECRET": {
       "required": true
-    },
-    "STRIPE_API_SECRET_ALEX": {
-      "required": true
     }
   },
   "formation": {
