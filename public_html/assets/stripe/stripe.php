@@ -1,13 +1,13 @@
 <?php
 require '../../../vendor/autoload.php';
-use Parse\ParseClient;
-use Parse\ParseObject;
-use Parse\ParseUser;
-use Stripe\Charge;
-use Stripe\Customer;
-use Stripe\Plan;
 use Stripe\Stripe;
+use Stripe\Charge;
+use Stripe\Plan;
+use Stripe\Customer;
 use Stripe\Subscription;
+use Parse\ParseClient;
+use Parse\ParseUser;
+use Parse\ParseObject;
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     header("HTTP/1.1 403 Forbidden");
@@ -82,17 +82,37 @@ try {
             ));
         }
 
-        // Step 2: Create a Customer
-        // TODO: Check if customer exists????
-        $customer = Customer::create(array(
-            "email" => $email,
-            "source" => $token, // payment info
-            "metadata" => array(
-                "name" => $name,
-                "phone" => $phone,
-                "address-zip" => $addressZip
-            )
-        ));
+        // Step 2: Does the customer exist already in Stripe?
+        $customer = getCustomerByEmail($email);
+
+        if (!isset($customer)) {
+            // Define a customer if it doesn't exist yet
+            $customer = Customer::create(array(
+                "email" => $email,
+                "source" => $token, // payment info
+                "metadata" => array(
+                    "name" => $name,
+                    "phone" => $phone,
+                    "address-zip" => $addressZip
+                )
+            ));
+        }
+
+        // Save Customer to Database
+//        ParseUser::logIn($_ENV["DB_USER"], $_ENV["DB_PASS"]);
+//
+//        $newCustomer = new ParseObject("Customer");
+//        $newCustomer->set("id", $customer->id);
+//        $newCustomer->set("email", $customer->email);
+//        $newCustomer->set("subscription", $plan);
+//
+//        try {
+//            $newCustomer->save();
+//        } catch (ParseException $ex) {
+//            throw new Exception("Failed to submit customer to db: " . $ex.get_message());
+//        } finally {
+//            ParseUser::logOut();
+//        }
 
         // Step 3: Subscribe Customer to Plan
         Subscription::create(array(
@@ -105,8 +125,24 @@ try {
         throw new Exception("Donation type has been unselected. Please go back and try again.");
     }
 
-    echo "{\"success\": true,\"message\": \"" . $success . "\"}";
+    echo "{'success': true,'message': '" . $success . "'}";
 } catch (Exception $e) {
-    echo "{\"success\": false,\"message\": \"" . $e . "\"}";
+    echo "{'success': false,'message': '" . $e . "'}";
 }
 
+function getCustomerByEmail($email){
+    $last_customer = NULL;
+    while (true) {
+        $customers = \Stripe\Customer::all(array("limit" => 100, "starting_after" => $last_customer));
+        foreach ($customers->autoPagingIterator() as $customer) {
+            if ($customer->email == $email) {
+                return $customer;
+            }
+        }
+        if (!$customers->has_more) {
+            break;
+        }
+        $last_customer = end($customers->data);
+    }
+    return NULL;
+}
