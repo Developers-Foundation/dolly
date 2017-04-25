@@ -46,16 +46,14 @@ $(document).ready(function() {
                 url 		: 'assets/stripe/stripe.php',
                 data 		: dataString,
                 success     : function(data){
-                    alert('success \n' + data);
+                    window.scrollTo(0, 0);
+                    $('alert-success').append(data['message']).removeClass('hidden');
                 },
                 error       : function(data){
-                    alert('error \n' + data);
+                    window.scrollTo(0, 0);
+                    $('alert-danger').append(data['message']).removeClass('hidden');
                 }
             });
-
-
-
-
 
             //successElement.querySelector('.token').textContent = result.token.id;
             //successElement.classList.add('visible');

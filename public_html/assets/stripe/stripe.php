@@ -65,7 +65,7 @@ try {
             "receipt_email" => $_POST['email-address']
         ));
 
-        $success = 'Your donation was successfully received. Thank You.';
+        $success = 'Your donation was successfully received. Thank You!';
     } else if ($_POST['radio-donate'] == "subscribe") {
 
         // Step 1: Does the plan exist already in Stripe?
