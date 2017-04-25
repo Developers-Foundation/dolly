@@ -88,6 +88,8 @@ $(document).ready(function () {
     document.querySelector('form').addEventListener('submit', function (e) {
         e.preventDefault();
 
+        $('#errorResponse').addClass('hidden');
+        $('#successResponse').addClass('hidden');
         $('#overlay').removeClass('hidden');
 
         var form = $('#donate-form');
