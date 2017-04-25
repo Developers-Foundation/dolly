@@ -123,9 +123,9 @@ try {
         throw new Exception("Donation type has been unselected. Please go back and try again.");
     }
 
-    echo "{'success': true,'message': '" . $success . "'}";
+    echo "{\"success\": true,\"message\": \"" . $success . "\"}";
 } catch (Exception $e) {
-    echo "{'success': false,'message': '" . $e . "'}";
+    echo "{\"success\": false,\"message\": \"" . $e . "\"}";
 }
 
 
