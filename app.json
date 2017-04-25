@@ -51,6 +51,10 @@
     }
   },
   "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
   },
   "addons": [
     "mailgun",

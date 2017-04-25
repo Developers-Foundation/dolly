@@ -2,7 +2,7 @@
  * Created by harrisonchow on 4/15/17.
  */
 
-$(document).ready(function() {
+$(document).ready(function () {
     var stripe = Stripe('pk_test_QDYPRtpiEelxK6ZQdope0gT0');
     var elements = stripe.elements();
 
@@ -42,21 +42,21 @@ $(document).ready(function() {
             // TODO: Change to ajax submit so the thing can be a little more smart
             // form.submit();
             $.ajax({
-                type 		: 'POST',
-                url 		: 'assets/stripe/stripe.php',
-                data 		: dataString,
-                success     : function(response){
+                type: 'POST',
+                url: 'assets/stripe/stripe.php',
+                data: dataString,
+                success: function (response) {
                     $('#overlay').addClass('hidden');
                     $('#donate-modal').modal("hide");
-                    if (!response.hasOwnProperty('success')){
+                    if (!response.hasOwnProperty('success')) {
                         $('#errorResponse').append(JSON.stringify(response)).removeClass('hidden');
-                    } else if (response['success']){
+                    } else if (response['success']) {
                         $('#successResponse').append(response['message']).removeClass('hidden');
                     } else if (!response['success']) {
                         $('#errorResponse').append(response['message']).removeClass('hidden');
                     }
                 },
-                error       : function(){
+                error: function () {
                     $('#overlay').addClass('hidden');
                     $('#donate-modal').modal("hide");
                     $('#errorResponse').append("An error has occurred with submitting the form.").removeClass('hidden');
@@ -72,11 +72,11 @@ $(document).ready(function() {
         }
     }
 
-    card.on('change', function(event) {
+    card.on('change', function (event) {
         setOutcome(event);
     });
 
-    document.querySelector('form').addEventListener('submit', function(e) {
+    document.querySelector('form').addEventListener('submit', function (e) {
         e.preventDefault();
 
         $('#overlay').removeClass('hidden');
@@ -87,6 +87,8 @@ $(document).ready(function() {
             address_zip: $('input[name=address-zip]').value,
             phone_number: $('input[name=phone-number]').value
         };
-        stripe.createToken(card, extraDetails).then(function(a){setOutcome(a, form)});
+        stripe.createToken(card, extraDetails).then(function (a) {
+            setOutcome(a, form)
+        });
     });
 });
