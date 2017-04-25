@@ -45,13 +45,22 @@ $(document).ready(function() {
                 type 		: 'POST',
                 url 		: 'assets/stripe/stripe.php',
                 data 		: dataString,
-                success     : function(data){
-                    window.scrollTo(0, 0);
-                    $('alert-success').append(data['message']).removeClass('hidden');
+                success     : function(response){
+                    $('#overlay').addClass('hidden');
+                    $('#donate-modal').modal("hide");
+                    if (!response.hasOwnProperty('success')){
+                        $('#errorResponse').append(JSON.stringify(response)).removeClass('hidden');
+                    } else if (response['success']){
+                        $('#successResponse').append(response['message']).removeClass('hidden');
+                    } else if (!response['success']) {
+                        $('#errorResponse').append(response['message']).removeClass('hidden');
+                    }
                 },
-                error       : function(data){
+                error       : function(){
+                    $('#overlay').addClass('hidden');
+                    $('#donate-modal').modal("hide");
+                    $('#errorResponse').append("An error has occurred with submitting the form.").removeClass('hidden');
                     window.scrollTo(0, 0);
-                    $('alert-danger').append(data['message']).removeClass('hidden');
                 }
             });
 
@@ -69,6 +78,9 @@ $(document).ready(function() {
 
     document.querySelector('form').addEventListener('submit', function(e) {
         e.preventDefault();
+
+        $('#overlay').removeClass('hidden');
+
         var form = $('#donate-form');
         var extraDetails = {
             name: $('input[name=cardholder-name]').value,

@@ -1,16 +1,16 @@
 <?php
-include_once("header.php");
-$page = "donate";
+    $page = "donate";
+    include_once("header.php");
 ?>
     <div class="donateHTML">
-        <div class="alert alert-success alert-dismissible hidden" role="alert"
+        <div id="successResponse" class="alert alert-success alert-dismissible hidden" role="alert"
              style="margin: 81px 0 0 0; border-radius: 0">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
             <strong>Thank you! </strong>
         </div>
 
-        <div class="alert alert-danger alert-dismissible hidden" role="alert"
+        <div id="errorResponse" class="alert alert-danger alert-dismissible hidden" role="alert"
              style="margin: 81px 0 0 0; border-radius: 0">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
