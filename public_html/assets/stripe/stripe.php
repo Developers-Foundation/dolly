@@ -132,10 +132,12 @@ try {
 function retrievePlan($amount){
     try {
         $plan = \Stripe\Plan::retrieve('monthly-plan-' . $amount);
-        return $plan;
+    } catch (Exception $e){
+        return NULL;
     } catch (Error $e) {
         return NULL;
     }
+    return $plan;
 }
 
 
