@@ -45,7 +45,7 @@
 
 <?php
     if (isset($page) && $page == "donate"){
-        echo "<div class='hidden' id=\"overlay\"><img src=\"public_html/assets/img/loader.gif\" alt=\"Loading\" /><br/></div>";
+        echo "<div class='hidden' id=\"overlay\"><img src=\"./assets/img/loader.gif\" alt=\"Loading\" /><br/></div>";
     }
 ?>
 
