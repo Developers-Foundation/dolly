@@ -65,7 +65,7 @@ try {
             "receipt_email" => $_POST['email-address']
         ));
 
-        $success = 'Your donation was successfully received. Thank You!';
+        $success = 'Your donation has been successfully received.';
     } else if ($_POST['radio-donate'] == "subscribe") {
 
         // Step 1: Does the plan exist already in Stripe?
@@ -118,7 +118,7 @@ try {
             "plan" => "monthly-plan-" . $amount
         ));
 
-        $success = 'You have successfully been subscribed at $' . ($amount / 100) . 'USD per month. Thank You!';
+        $success = 'You have successfully been subscribed at $' . ($amount / 100) . 'USD per month.';
     } else {
         throw new Exception("Donation type has been unselected. Please go back and try again.");
     }

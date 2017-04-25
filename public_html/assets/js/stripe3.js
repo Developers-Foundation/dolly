@@ -64,6 +64,7 @@ $(document).ready(function () {
                             'Please try again later, or check the console for more information.').removeClass('hidden');
                         console.error(response);
                     }
+                    window.scrollTo(0, 0);
                 },
                 error: function () {
                     $('#overlay').addClass('hidden');
