@@ -2,9 +2,9 @@
 include_once("header.php");
 $page = "donate";
 ?>
-
+    <div id="loadingCover"></div>
     <div class="donateHTML">
-        <div class="alert alert-success alert-dismissible hidden" role="alert"
+        <div class="alert alert-success alert-dismissible" role="alert"
              style="margin: 81px 0 0 0; border-radius: 0">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
@@ -134,8 +134,8 @@ $page = "donate";
 
                     <div class="modal-body">
                         <form action="assets/stripe/stripe.php" method="post" id="donate-form">
-                            <input type="radio" name="radio-donate" value="donate" checked="checked"> Donate Once
-                            <input type="radio" name="radio-donate" value="subscribe"> Donate Monthly
+                            <label><input type="radio" name="radio-donate" value="donate" checked="checked"> Donate Once </label>
+                            <label><input type="radio" name="radio-donate" value="subscribe"> Donate Monthly</label>
                             <div class="group">
                                 <label>
                                     <span>Name</span>
