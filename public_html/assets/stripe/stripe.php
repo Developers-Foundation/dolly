@@ -69,8 +69,7 @@ try {
     } else if ($_POST['radio-donate'] == "subscribe") {
 
         // Step 1: Does the plan exist already in Stripe?
-        $plan = Plan::retrieve('monthly-plan-' . $amount);
-
+        $plan = retrievePlan($amount);
         if (!isset($plan)) {
             // Define a Plan if it doesn't exist yet
             $plan = Plan::create(array(
@@ -83,8 +82,7 @@ try {
         }
 
         // Step 2: Does the customer exist already in Stripe?
-        $customer = getCustomerByEmail($email);
-
+        $customer = retrieveCustomerByEmail($email);
         if (!isset($customer)) {
             // Define a customer if it doesn't exist yet
             $customer = Customer::create(array(
@@ -130,7 +128,18 @@ try {
     echo "{'success': false,'message': '" . $e . "'}";
 }
 
-function getCustomerByEmail($email){
+
+function retrievePlan($amount){
+    try {
+        $plan = \Stripe\Plan::retrieve('monthly-plan-' . $amount);
+        return $plan;
+    } catch (Error $e) {
+        return NULL;
+    }
+}
+
+
+function retrieveCustomerByEmail($email){
     $last_customer = NULL;
     while (true) {
         $customers = \Stripe\Customer::all(array("limit" => 100, "starting_after" => $last_customer));
