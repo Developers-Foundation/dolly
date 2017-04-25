@@ -1,13 +1,13 @@
 <?php
 require '../../../vendor/autoload.php';
-use Stripe\Stripe;
-use Stripe\Charge;
-use Stripe\Plan;
-use Stripe\Customer;
-use Stripe\Subscription;
 use Parse\ParseClient;
-use Parse\ParseUser;
 use Parse\ParseObject;
+use Parse\ParseUser;
+use Stripe\Charge;
+use Stripe\Customer;
+use Stripe\Plan;
+use Stripe\Stripe;
+use Stripe\Subscription;
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     header("HTTP/1.1 403 Forbidden");
