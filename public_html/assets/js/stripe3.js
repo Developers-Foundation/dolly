@@ -48,12 +48,21 @@ $(document).ready(function() {
                 success     : function(response){
                     $('#overlay').addClass('hidden');
                     $('#donate-modal').modal("hide");
-                    if (!response.hasOwnProperty('success')){
-                        $('#errorResponse').append(JSON.stringify(response)).removeClass('hidden');
-                    } else if (response['success']){
-                        $('#successResponse').append(response['message']).removeClass('hidden');
-                    } else if (!response['success']) {
-                        $('#errorResponse').append(response['message']).removeClass('hidden');
+
+                    if (isJsonString(response)) {
+                        response = JSON.parse(response);
+
+                        if (!response.hasOwnProperty('success')) {
+                            $('#errorResponse').append(JSON.stringify(response)).removeClass('hidden');
+                        } else if (response['success']) {
+                            $('#successResponse').append(response['message']).removeClass('hidden');
+                        } else if (!response['success']) {
+                            $('#errorResponse').append(response['message']).removeClass('hidden');
+                        }
+                    } else {
+                        $('#errorResponse').append('An error has occurred and your payment did not go through. ' +
+                            'Please try again later, or check the console for more information.').removeClass('hidden');
+                        console.error(response);
                     }
                 },
                 error       : function(){
@@ -89,4 +98,15 @@ $(document).ready(function() {
         };
         stripe.createToken(card, extraDetails).then(function(a){setOutcome(a, form)});
     });
+
 });
+
+function isJsonString(str) {
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        console.error(e);
+        return false;
+    }
+    return true;
+}

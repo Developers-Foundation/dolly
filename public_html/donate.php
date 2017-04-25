@@ -42,7 +42,7 @@
             <div class="row text-center" style="padding-top: 10px">
                 <div class="col-md-12">
                     <a>
-                        <button class="btn donateGreen" data-toggle="modal" data-target="#donate-modal">Donate</button>
+                        <button class="btn donateGreen" id="donateModalButton" data-toggle="modal" data-target="#donate-modal">Donate</button>
                     </a>
                 </div>
             </div>
