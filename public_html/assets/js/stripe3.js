@@ -67,10 +67,15 @@ $(document).ready(function () {
                     window.scrollTo(0, 0);
                     $('#successResponse')[0].scrollIntoView(false);
                 },
-                error: function () {
+                error: function (err) {
+                    console.log(err);
                     $('#overlay').addClass('hidden');
                     $('#donate-modal').modal("hide");
                     $('#errorResponse').append("An error has occurred with submitting the form.").removeClass('hidden');
+                    window.scrollTo(0, 0);
+                    $('#successResponse')[0].scrollIntoView(false);
+                },
+                complete: function(data) {
                     window.scrollTo(0, 0);
                     $('#successResponse')[0].scrollIntoView(false);
                 }
