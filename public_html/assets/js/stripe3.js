@@ -65,12 +65,14 @@ $(document).ready(function () {
                         console.error(response);
                     }
                     window.scrollTo(0, 0);
+                    $('#successResponse')[0].scrollIntoView(false);
                 },
                 error: function () {
                     $('#overlay').addClass('hidden');
                     $('#donate-modal').modal("hide");
                     $('#errorResponse').append("An error has occurred with submitting the form.").removeClass('hidden');
                     window.scrollTo(0, 0);
+                    $('#successResponse')[0].scrollIntoView(false);
                 }
             });
 
