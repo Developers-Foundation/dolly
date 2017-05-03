@@ -16,60 +16,36 @@ include_once("header.php");
                 <form class="form-email" action="" method="post" data-form-type="nob">
                     <div class="col-md-6">
                         <div>
-                            <input type="text" class="form-control form-input-name" placeholder="Your Name">
-                        </div>
-                        <div>
-                            <input type="text" class="form-control form-input-email" placeholder="Your Email">
+                            <input type="text" class="form-control form-input-name" placeholder="Full Name:">
                         </div>
                     </div>
                     <div class="col-md-6">
-                            <textarea class="form-control form-input-message" placeholder="Your Message"
+                        <div>
+                            <input type="text" class="form-control form-input-email" placeholder="Email Address:">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control form-input-phone" placeholder="Phone Number:">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control form-input-subject" placeholder="Subject:">
+                    </div>
+                    <div class="col-md-12">
+                            <textarea class="form-control form-input-message" placeholder="Message:"
                                       rows="6"></textarea>
                     </div>
                     <div class="col-md-12 text-center">
                         <button class="btn btn-raised btn-primary btn-lg">Send</button>
                     </div>
                 </form>
+                <p>
+                    <b>Or find us here!</b><br><br>
+                    <b>Address</b><br>
+                    Plot 20, Moshood Abiola Crescent, Off Toyin street,Ikeja Lagos, Nigeria<br><br>
+                    <b>Telephone</b><br>
+                    (+234) 708-739-0017     (+234) 818-689-1611
+                </p>
             </div>
-
-            <!--
-            <div class="row form-group">
-
-                <div class="col-md-6">
-                    <input type="text" class="form-control" placeholder="Full Name:" id="formName"
-                           required="" data-validation-required-message="Please enter your name." aria-invalid="false">
-                </div>
-
-
-                <div class="col-md-6">
-                    <input type="text" class="form-control" placeholder="Email Address:" id="formEmail"
-                           required="" data-validation-required-message="Please enter your email address."
-                           aria-invalid="false">
-                </div>
-
-
-                <div class="col-md-6">
-                    <input type="text" class="form-control" placeholder="Phone Number:" id="formPhone"
-                           required="" data-validation-required-message="Please enter your phone number."
-                           aria-invalid="false">
-                </div>
-
-
-                <div class="col-md-6">
-                    <input type="text" class="form-control" placeholder="Subject:" id="formSubject"
-                           required="" data-validation-required-message="Please enter the subject." aria-invalid="false">
-                </div>
-
-
-                <div class="col-md-12">
-                    <textarea class="form-control" placeholder="Message:"></textarea>
-                </div>
-
-
-                <div class="col-md-12" style="text-align: center">
-                    <button type="button">Submit</button>
-                </div>
-            </div> -->
         </div>
     </div>
 <?php

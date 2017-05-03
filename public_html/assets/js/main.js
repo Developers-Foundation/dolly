@@ -12,14 +12,17 @@ $(document).ready(function () {
         var emailField = thisForm.find('.form-input-email');
         var nameField = thisForm.find('.form-input-name');
         var messageField = thisForm.find('.form-input-message');
+        var subjectField = thisForm.find('.form-input-subject');
+        var phoneField = thisForm.find('.form-input-phone');
 
         if (thisForm.attr('data-form-type').indexOf("nob") > -1) {
             // Nob form
             var sendFrom = emailField.val(),
-                sendTo = "dollychildrenfoundationng@gmail.com",
-                subject = "Message from " + nameField.val(),
+                //sendTo = "dollychildrenfoundationng@gmail.com",
+                sendTo = "michael511.mp@gmail.com", // testing
+                subject = "Message from " + nameField.val() + "Subject: " + subjectField.val(),
                 msg = messageField.val(),
-                msgHTML = "<p>" + messageField.val() + "<p>",
+                msgHTML = "<p> Phone Number: " + phoneField.val() +"<br>"+ messageField.val() + "<p>",
                 fromName = nameField.val(),
                 toName = "Dolly Children Foundation Website";
 
