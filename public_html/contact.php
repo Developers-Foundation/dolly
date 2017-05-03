@@ -41,7 +41,7 @@ include_once("header.php");
                 <p>
                     <b>Or find us here!</b><br><br>
                     <b>Address</b><br>
-                    Plot 20, Moshood Abiola Crescent, Off Toyin street,Ikeja Lagos, Nigeria<br><br>
+                    Plot 20, Moshood Abiola Crescent, Off Toyin street, Ikeja Lagos, Nigeria<br><br>
                     <b>Telephone</b><br>
                     (+234) 708-739-0017     (+234) 818-689-1611
                 </p>
