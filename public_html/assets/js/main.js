@@ -54,6 +54,8 @@ $(document).ready(function () {
                         emailField.val("");
                         nameField.val("");
                         messageField.val("");
+                        phoneField.val("");
+                        subjectField.val("");
                         submitButton.html("Received");
                         submitButton.addClass("btn-success");
                     } else {
