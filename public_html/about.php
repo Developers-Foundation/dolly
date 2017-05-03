@@ -36,10 +36,14 @@ include_once("header.php");
             </div>
         </div>
 
-        <div class="moreInfoIcons container">
+        <div class="moreInfoIcons container ourWork">
             <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1>Our Work</h1>
+                    <div class="text-center ourWorkRectangle"></div>
+                </div>
                 <div class="col-md-4">
-                    <img src="assets/img/icons/book_grey.png" alt="icon1" width="100%"/>
+                    <img src="assets/img/icons/book_green.png" alt="icon1" width="100%"/>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor arcu, sodales eu lacus vel,
                         pulvinar dapibus odio. Aliquam aliquet consequat rutrum. Lorem ipsum dolor sit amet, consectetur
@@ -49,7 +53,7 @@ include_once("header.php");
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <img src="assets/img/icons/KIDS_grey.png" alt="icon2" width="100%"/>
+                    <img src="assets/img/icons/KIDS_green.png" alt="icon2" width="100%"/>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor arcu, sodales eu lacus vel,
                         pulvinar dapibus odio. Aliquam aliquet consequat rutrum. Lorem ipsum dolor sit amet, consectetur
@@ -59,7 +63,7 @@ include_once("header.php");
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <img src="assets/img/icons/Backpack_grey.png" alt="icon3" width="100%"/>
+                    <img src="assets/img/icons/Backpack_green.png" alt="icon3" width="100%"/>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor arcu, sodales eu lacus vel,
                         pulvinar dapibus odio. Aliquam aliquet consequat rutrum. Lorem ipsum dolor sit amet, consectetur
@@ -72,7 +76,7 @@ include_once("header.php");
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-4">
-                    <img src="assets/img/icons/people_grey.png" alt="icon4" width="100%"/>
+                    <img src="assets/img/icons/people_green.png" alt="icon4" width="100%"/>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor arcu, sodales eu lacus vel,
                         pulvinar dapibus odio. Aliquam aliquet consequat rutrum. Lorem ipsum dolor sit amet, consectetur
@@ -82,7 +86,7 @@ include_once("header.php");
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <img src="assets/img/icons/hammer_grey.png" alt="icon5" width="100%"/>
+                    <img src="assets/img/icons/hammer_green.png" alt="icon5" width="100%"/>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor arcu, sodales eu lacus vel,
                         pulvinar dapibus odio. Aliquam aliquet consequat rutrum. Lorem ipsum dolor sit amet, consectetur
