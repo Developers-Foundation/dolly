@@ -53,7 +53,7 @@ include_once("header.php");
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <img src="assets/img/icons/KIDS_green.png" alt="icon2" width="100%"/>
+                    <img src="assets/img/icons/kids_green.png" alt="icon2" width="100%"/>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor arcu, sodales eu lacus vel,
                         pulvinar dapibus odio. Aliquam aliquet consequat rutrum. Lorem ipsum dolor sit amet, consectetur
@@ -63,7 +63,7 @@ include_once("header.php");
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <img src="assets/img/icons/Backpack_green.png" alt="icon3" width="100%"/>
+                    <img src="assets/img/icons/backpack_green.png" alt="icon3" width="100%"/>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor arcu, sodales eu lacus vel,
                         pulvinar dapibus odio. Aliquam aliquet consequat rutrum. Lorem ipsum dolor sit amet, consectetur
