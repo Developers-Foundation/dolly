@@ -30,7 +30,7 @@
 <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="assets/js/main.js" type="text/javascript"></script>
 <script src="https://js.stripe.com/v3/"></script>
-<script src="//maps.google.com/maps/api/js?key=AIzaSyB-Vv7-SjXdGrxZvihnhlZm1HIFA6TBg-Q&callback=loadedGmap" async defer></script>
+<script src="//maps.google.com/maps/api/js?key=AIzaSyDB4HGFp5gVXh06rxNL7R9ypYZMI9261Pc&callback=loadedGmap" async defer></script>
 <?php
 if (isset($page) && $page == "donate")
     echo "<script type=\"text/javascript\" src=\"./assets/js/stripe3.js\"></script>";
