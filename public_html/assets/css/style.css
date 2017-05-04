@@ -12,9 +12,6 @@ p {
   line-height: normal;
   letter-spacing: normal;
 }
-.row {
-  margin-right: 0;
-}
 .mobilesize {
   background-color: white;
   border-color: white;
@@ -415,8 +412,8 @@ footer {
 }
 .donateGreen {
   margin: 25px;
-  width: 250px;
-  height: 75px;
+  width: 175px;
+  height: 50px;
   border-radius: 10px;
   background-color: #179e80;
 }
@@ -434,29 +431,35 @@ footer {
   text-align: center;
   color: #737370;
 }
-.makeadiffernece h1 {
-  padding: 25px 0 25px 0;
-  font-size: 64px;
+.partnerWithUs h1 {
+  font-size: 53px;
   font-weight: 500;
-  font-stretch: condensed;
-  color: #179e80;
+  color: #f5a623;
 }
-.makeadiffernece h2 {
-  font-size: 64px;
+.partnerWithUs .title {
+  margin: 30px;
+}
+.partnerWithUs h2 {
+  font-size: 24px;
   font-weight: 500;
-  font-stretch: condensed;
-  color: #179e80;
+  color: #4a4a4a;
 }
-.makeadiffernece p {
+.partnerWithUs img {
+  max-width: 400px;
+  height: 300px;
+  margin: auto;
+}
+.partnerWithUs p {
+  margin: auto;
+  min-height: 300px;
+  max-width: 400px;
   font-size: 18px;
   font-weight: 500;
   color: #4a4a4a;
 }
-.makeadiffernece img {
-  width: 100%;
-}
-.makeadiffernece .imgPadding {
-  padding: 0;
+mark.orange {
+  color: #f5a623;
+  background: none;
 }
 .positionfix {
   min-height: 400px;
@@ -667,3 +670,6 @@ footer {
   width: 5%;
 }
 /* ============================================== STRIPE ================================================= */
+#google_map {
+  height: 500px;
+}
