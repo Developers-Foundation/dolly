@@ -18,10 +18,10 @@ $(document).ready(function () {
         if (thisForm.attr('data-form-type').indexOf("nob") > -1) {
             // Nob form
             var sendFrom = emailField.val(),
-                //sendTo = "dollychildrenfoundationng@gmail.com",
+                //sendTo = "dolly@dollychildren.org",
                 sendTo = "michael511.mp@gmail.com", // testing
-                subject = "Message from " + nameField.val() + "Subject: " + subjectField.val(),
-                msg = messageField.val(),
+                subject = "Message from " + nameField.val() + " Subject: " + subjectField.val(),
+                msg = "Message: " + messageField.val(),
                 msgHTML = "<p> Phone Number: " + phoneField.val() +"<br>"+ messageField.val() + "<p>",
                 fromName = nameField.val(),
                 toName = "Dolly Children Foundation Website";
