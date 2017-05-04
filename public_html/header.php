@@ -40,6 +40,13 @@
 </head>
 
 <body>
+
+<?php
+    if (isset($page) && $page == "donate"){
+        echo "<div class='hidden' id=\"overlay\"><img src=\"assets/img/loader.gif\" alt=\"Loading\" /><br/></div>";
+    }
+?>
+
 <nav id="navbar" class="navbar navbar-fixed-top navbar-default">
     <div class="container container-set">
         <!-- Brand and toggle get grouped for better mobile display -->
