@@ -1,14 +1,20 @@
 <?php
-include_once("header.php");
-$page = "donate";
+    $page = "donate";
+    include_once("header.php");
 ?>
-
     <div class="donateHTML">
-        <div class="alert alert-success alert-dismissible hidden" role="alert"
+        <div id="successResponse" class="alert alert-success alert-dismissible hidden" role="alert"
              style="margin: 81px 0 0 0; border-radius: 0">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
-            <strong>Thank you!</strong> We truly appreciate your donation.
+            <strong>Thank you! </strong>
+        </div>
+
+        <div id="errorResponse" class="alert alert-danger alert-dismissible hidden" role="alert"
+             style="margin: 81px 0 0 0; border-radius: 0">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            <strong>Oh no! </strong>
         </div>
 
         <div class="donateBG">
@@ -33,17 +39,10 @@ $page = "donate";
             <p>
                 Thank you.
             </p>
-            <div class="row text-center" style="padding-top: 25px">
-                <div class="col-md-6">
+            <div class="row text-center" style="padding-top: 10px">
+                <div class="col-md-12">
                     <a>
-                        <button class="btn donateGreen" data-toggle="modal" data-target="#donate-modal">Donate</button>
-                    </a>
-                </div>
-                <div class="col-md-6">
-                    <a>
-                        <button class="btn donateGreen" data-toggle="modal" data-target="#sponsor-modal">Sponsor a
-                            Child
-                        </button>
+                        <button class="btn donateGreen" id="donateModalButton" data-toggle="modal" data-target="#donate-modal">Donate</button>
                     </a>
                 </div>
             </div>
@@ -141,7 +140,8 @@ $page = "donate";
 
                     <div class="modal-body">
                         <form action="assets/stripe/stripe.php" method="post" id="donate-form">
-                            <input type="hidden" name="donation-type" value="donation"/>
+                            <label><input type="radio" name="radio-donate" value="donate" checked="checked"> Donate Once </label>
+                            <label><input type="radio" name="radio-donate" value="subscribe"> Donate Monthly</label>
                             <div class="group">
                                 <label>
                                     <span>Name</span>
@@ -169,10 +169,10 @@ $page = "donate";
                             <div class="group">
                                 <label>
                                     <span>Amount</span>
-                                    <input name="donate-amount" class="field" placeholder="USD" type="number"/>
+                                    <input name="donate-amount" class="field" placeholder="USD" type="number" min="1"/>
                                 </label>
                             </div>
-                            <button>Submit Donation</button>
+                            <button>Submit Donation <i class="fa fa-lock" style="padding-left: 3px"></i></button>
 
                             <div class="outcome">
                                 <div class="error"></div>
@@ -182,47 +182,6 @@ $page = "donate";
                             </div>
                         </form>
 
-                        <!-- to display errors returned by createToken -->
-                        <!--                    <span class="payment-errors">--><?php //echo $error ?><!--</span>-->
-                        <!--                    <span class="payment-success">--><?php //echo $success ?><!--</span>-->
-                        <!--                    <form action="assets/stripe/stripe.php" method="post" id="payment-form">-->
-                        <!--                        <h1>Donate</h1><br>-->
-                        <!---->
-                        <!--                        <h4>Contact Information</h4>-->
-                        <!---->
-                        <!--                        <input type="text" placeholder="Full Name" id="customer_name"/>-->
-                        <!--                        <input type="text" placeholder="Address" id="address_line1"/>-->
-                        <!--                        <input type="text" placeholder="Postal Code" id="address_zip" style="width: 49%"/>-->
-                        <!--                        <input type="text" placeholder="City" id="address_city" style="width: 49%"/>-->
-                        <!--                        <input type="text" placeholder="Province" id="address_state" style="width: 49%"/>-->
-                        <!--                        <input type="text" placeholder="Country" id="address_country" style="width: 49%"/>-->
-                        <!--                        <input type="text" placeholder="Email" name="receiptEmail"/>-->
-                        <!---->
-                        <!--                        <h4>Card Details <i class="fa fa-lock" style="padding-left: 3px"></i></h4>-->
-                        <!---->
-                        <!---->
-                        <!--                        <div class="form-row">-->
-                        <!--                            <input type="text" size="20" autocomplete="off" placeholder="Card Number" id="card-number"/>-->
-                        <!--                        </div>-->
-                        <!--                        <div class="form-row">-->
-                        <!--                            <input type="text" size="4" autocomplete="off" placeholder="CVC" id="card-cvc"/>-->
-                        <!--                        </div>-->
-                        <!--                        <div class="form-row">-->
-                        <!--                            <input type="text" size="2" placeholder="Expiration - MM" id="card-expiry-month"-->
-                        <!--                                   style="width: 49%;"/>-->
-                        <!--                            <input type="text" size="4" placeholder="Expiration - YYYY" id="card-expiry-year"-->
-                        <!--                                   style="width: 49%;"/>-->
-                        <!--                        </div>-->
-                        <!--                        <div class="form-row">-->
-                        <!--                            <input type="text" name="amount" placeholder="Donation Amount ($)">-->
-                        <!--                        </div>-->
-                        <!--                        <!--<input type="submit" name="submitButton" class="donate donatemodal-submit submit" value="Donate">-->
-                        <!--                        <input type="submit" class="donate donatemodal-submit submit" id="submit-button"-->
-                        <!--                               value="Donate"/>-->
-                        <!-- -->
-                        <!--                        <p>Your card will be charged only once, with the donation amount specified above.</p>-->
-                        <!--                    </form>-->
-
                         <div class="donate-help">
                             <!--                    <a href="#">Help</a>-->
                         </div>
@@ -230,51 +189,6 @@ $page = "donate";
                 </div>
             </div>
         </div>
-
-        <!-- Sponsor a Child Modal -->
-        <!--    <div class="modal fade" id="sponsor-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">-->
-        <!--        <div class="modal-dialog">-->
-        <!--            <div class="donatemodal-container">-->
-        <!--                <div class="closeModal">-->
-        <!--                    <a data-toggle="modal" data-target="#sponsor-modal"><i class="fa fa-times" style="font-size: 16px"></i></a>-->
-        <!--                </div>-->
-        <!---->
-        <!--                <h1>Sponsor a Child</h1><br>-->
-        <!---->
-        <!--                <h4>Contact Information</h4>-->
-        <!---->
-        <!--                <form action="assets/stripe/stripe.php" method="POST" id="sponsor-form">-->
-        <!--                    <p class="payment-errors"></p>-->
-        <!---->
-        <!--                    <input type="hidden" name="type" value="sponsor">-->
-        <!--                    <input type="text" name="name"            placeholder="Full Name"    data-stripe="name">-->
-        <!--                    <input type="text" name="address_line1"   placeholder="Address"      data-stripe="address_line1">-->
-        <!--                    <input type="text" name="address_zip"     placeholder="Postal Code"  data-stripe="address_zip"  style="width: 49%">-->
-        <!--                    <input type="text" name="address_city"    placeholder="City"         data-stripe="address_city" style="width: 49%">-->
-        <!--                    <input type="text" name="address_state"   placeholder="Province"     data-stripe="address_state" style="width: 49%">-->
-        <!--                    <input type="text" name="address_country" placeholder="Country"      data-stripe="address_country" style="width: 49%">-->
-        <!--                    <input type="text" name="receipt_email"   placeholder="Email">-->
-        <!--                    <input type="text" name="receipt_number"  placeholder="Phone Number">-->
-        <!---->
-        <!--                    <h4>Card Details  <i class="fa fa-lock" style="padding-left: 3px"></i></h4>-->
-        <!---->
-        <!--                    <input type="text"   name="cardnumber"      placeholder="Card Number"       data-stripe="number">-->
-        <!--                    <input type="text"   name="exp_month"       placeholder="Expiration - MM"   data-stripe="exp_month" style="width: 49%;">-->
-        <!--                    <input type="text"   name="exp_year"        placeholder="Expiration - YY"   data-stripe="exp_year"  style="width: 49%;">-->
-        <!--                    <input type="text"   name="cvc"             placeholder="CVC"               data-stripe="cvc">-->
-        <!--                    <input type="text"   name="amount"          placeholder="Monthly Donation Amount ($)" >-->
-        <!--                    <input type="submit" name="submitButton" class="donate donatemodal-submit submit" value="Sponsor">-->
-        <!--                    <p>Your card will be charged monthly with the donation amount specified above. Please email us at-->
-        <!--                        example@example.com if you would like us to remove your card from the sponsors list.</p>-->
-        <!--                </form>-->
-        <!--                <span class="payment-errors"></span>-->
-        <!---->
-        <!--                <div class="donate-help">-->
-        <!--                    <!--                    <a href="#">Help</a>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </div>-->
-        <!--    </div>-->
 
         <script
                 src="https://code.jquery.com/jquery-3.1.1.slim.min.js"

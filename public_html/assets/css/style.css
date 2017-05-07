@@ -35,7 +35,7 @@ p {
 .navbar-brand {
   float: left;
   height: 80px;
-  padding: 0px;
+  padding: 0;
 }
 .navbar-brand > img {
   height: 100%;
@@ -91,6 +91,15 @@ footer {
   color: #ffffff;
   /*text-shadow: 1px 1px #aaa;*/
 }
+#journey a {
+  font-size: 24px;
+  font-weight: 800;
+  font-stretch: condensed;
+  color: #ffffff;
+}
+#journey button {
+  margin-bottom: 50px;
+}
 .whiteBG {
   margin: 170px 25px 150px 25px;
   border-radius: 10px;
@@ -112,15 +121,6 @@ footer {
   font-size: 20px;
   font-weight: normal;
   color: #ffffff;
-}
-#journey a {
-  font-size: 24px;
-  font-weight: 800;
-  font-stretch: condensed;
-  color: #ffffff;
-}
-#journey button {
-  margin-bottom: 50px;
 }
 .learnMore {
   width: 168px;
@@ -633,5 +633,21 @@ footer {
   width: 100%;
   text-align: right;
   margin-bottom: -20px;
+}
+#overlay {
+  background: rgba(0, 0, 0, 0.7);
+  color: #666666;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  float: left;
+  text-align: center;
+  padding-top: 25%;
+}
+#overlay img {
+  width: 5%;
 }
 /* ============================================== STRIPE ================================================= */

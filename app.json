@@ -51,7 +51,12 @@
     }
   },
   "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
   },
+  "stack": "heroku-16",
   "addons": [
     "mailgun",
     "papertrail"

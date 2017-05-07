@@ -75,3 +75,10 @@ $(document).ready(function () {
 /* ----------------------------------------------------------- */
 /* Nob Mailer END
  /* ----------------------------------------------------------- */
+
+// Prevent default button click behaviour
+$(document).ready(function(){
+   $('#donateModalButton').on('click', function(e){
+       e.preventDefault();
+   })
+});
