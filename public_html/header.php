@@ -39,7 +39,7 @@
 
 </head>
 
-<body>
+<body<?php if (isset($page)) {echo " class='contact-page'";} ?>>
 
 <?php
     if (isset($page) && $page == "donate"){
