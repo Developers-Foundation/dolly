@@ -40,7 +40,6 @@
 </head>
 
 <body<?php if (isset($page)) {echo " class='" . $page . "'";} ?>>
-
 <?php
     if (isset($page) && $page == "donate"){
         echo "<div class='hidden' id=\"overlay\"><img src=\"assets/img/loader.gif\" alt=\"Loading\" /><br/></div>";
