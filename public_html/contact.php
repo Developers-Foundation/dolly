@@ -1,5 +1,5 @@
 <?php
-$page = "contact-page";
+$page = "contact";
 include_once("header.php");
 ?>
     <div class="contactus">
