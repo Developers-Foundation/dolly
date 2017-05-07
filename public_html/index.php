@@ -27,11 +27,11 @@ include_once("header.php");
                 <p>Reading clubs and After School Programs</p>
             </div>
             <div class="col-md-2 vline">
-                <img src="assets/img/icons/KIDS_grey.png">
+                <img src="assets/img/icons/kids_grey.png">
                 <p>Sponsorship Programs for Pupils from Under-Served Families</p>
             </div>
             <div class="col-md-2 vline">
-                <img src="assets/img/icons/Backpack_grey.png">
+                <img src="assets/img/icons/backpack_grey.png">
                 <p>Back to School Initiatives</p>
             </div>
             <div class="col-md-2 vline">
