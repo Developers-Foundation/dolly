@@ -1,20 +1,14 @@
 <?php
-    $page = "donate";
-    include_once("header.php");
+include_once("header.php");
+$page = "donate";
 ?>
-    <div class="donateHTML">
-        <div id="successResponse" class="alert alert-success alert-dismissible hidden" role="alert"
-             style="margin: 81px 0 0 0; border-radius: 0">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-            <strong>Thank you! </strong>
-        </div>
 
-        <div id="errorResponse" class="alert alert-danger alert-dismissible hidden" role="alert"
+    <div class="donateHTML">
+        <div class="alert alert-success alert-dismissible hidden" role="alert"
              style="margin: 81px 0 0 0; border-radius: 0">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
-            <strong>Oh no! </strong>
+            <strong>Thank you!</strong> We truly appreciate your donation.
         </div>
 
         <div class="donateBG">
@@ -39,91 +33,80 @@
             <p>
                 Thank you.
             </p>
-            <div class="row text-center" style="padding-top: 10px">
-                <div class="col-md-12">
-                    <a>
-                        <button class="btn donateGreen" id="donateModalButton" data-toggle="modal" data-target="#donate-modal">Donate</button>
-                    </a>
+        </div>
+        <div class="partnerWithUs">
+            <div class="row">
+                <div class="col-md-12 text-center title">
+                    <h1 >Partner With Us Today</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="img-responsive" src="assets/img/main/donate1.jpg">
+                    <h2 class="title text-center">Sponsor a Child</h2>
+                    <p>
+                        No child should be left be left behind in schooling.
+                        But around 10.5 Million Nigerian children of primary school age are not going to school.
+                        <br>
+                        <br>
+                        <br>
+                        <mark class="orange">N 7,500</mark> helps pay the tuition fees of 5 children already in school
+                        <br>
+                        <mark class="orange">N 12,000</mark> buys new books and stationaries for 5 children
+                        <br>
+                        <mark class="orange">N 40,000</mark> pays for the tuition fees of 5 primary school drop-outs by bringing htem back to school
+                    </p>
+                    <div class="text-center">
+                        <a class="text-center">
+                            <button class="btn donateGreen" id="donateModalButton" data-toggle="modal" data-target="#donate-modal">Donate</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img class="img-responsive" src="assets/img/main/donate2.jpg">
+                    <h2 class="title text-center">Support a School Building Project</h2>
+                    <p>
+                        Provision of more conducive learning facilities eradicates overcrowding of children
+                        in classrooms and shortens the long travel distances. Children in remost communities
+                        sometimes walk one to two hours to attentd school.
+                        <br>
+                        <br>
+                        <br>
+                    </p>
+                    <div class="text-center">
+                        <a class="text-center">
+                            <button class="btn donateGreen" id="donateModalButton" data-toggle="modal" data-target="#donate-modal">Donate</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img class="img-responsive" src="assets/img/main/donate0.JPG">
+                    <h2 class="title text-center">Support an Empowerment Initiative</h2>
+                    <p>
+                        Education creates a platform for children to realize their potentials and become
+                        all that they want to be. But 58% of school children are not meeting basic learning
+                        and reading level.
+                        <br>
+                        <br>
+                        <br>
+                        <mark class="orange">N 2,000</mark> helps a child participate in an after school program.
+                        <br>
+                        <mark class="orange">N 3,000</mark> admits a primary school drop-out into DCF summer tutoring program.
+                        <br>
+                        <mark class="orange">N 3,000</mark> encourages 6 children to read a book in a school.
+                        <br>
+                        <mark class="orange">N 5,000</mark> provides a back-to-school kit for a child.
+                    </p>
+                    <div class="text-center">
+                        <a class="text-center">
+                            <button class="btn donateGreen" id="donateModalButton" data-toggle="modal" data-target="#donate-modal">Donate</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="makeadiffernece">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h1><strong>Make a Difference</strong></h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 imgPadding">
-                    <img class="img-responsive" src="assets/img/main/donate1.jpg">
-                </div>
-                <div class="col-md-6 positionfix">
-                    <div class="positionlow">
-                        <h2><strong>Children</strong></h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor arcu, sodales eu lacus
-                            vel,
-                            pulvinar dapibus odio. Aliquam aliquet consequat rutrum. Lorem ipsum dolor sit amet,
-                            consectetur
-                            adipiscing elit. Integer volutpat neque sed arcu efficitur volutpat. Ut eget dolor sit amet
-                            risus
-                            lacinia tempor. Pellentesque dictum blandit ante in lobortis. Nulla facilisi. Suspendisse
-                            aliquet
-                            a tortor sit amet sollicitudin. Sed cursus finibus risus, quis posuere purus semper quis.
-                            Vivamus non ex dapibus, pretium nulla at, iaculis arcu. Vivamus commodo purus eget diam
-                            luctus consequat.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <div class="sponsorChild">
 
-            <div class="row">
-                <div class="col-md-6 col-md-push-6 imgPadding">
-                    <img class="img-responsive" src="assets/img/main/donate2.jpg">
-                </div>
-                <div class="col-md-6 col-md-pull-6 positionfix">
-                    <div class="positionlow">
-                        <h2><strong>School</strong></h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor arcu, sodales eu lacus
-                            vel,
-                            pulvinar dapibus odio. Aliquam aliquet consequat rutrum. Lorem ipsum dolor sit amet,
-                            consectetur
-                            adipiscing elit. Integer volutpat neque sed arcu efficitur volutpat. Ut eget dolor sit amet
-                            risus
-                            lacinia tempor. Pellentesque dictum blandit ante in lobortis. Nulla facilisi. Suspendisse
-                            aliquet
-                            a tortor sit amet sollicitudin. Sed cursus finibus risus, quis posuere purus semper quis.
-                            Vivamus non ex dapibus, pretium nulla at, iaculis arcu. Vivamus commodo purus eget diam
-                            luctus consequat.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6 imgPadding">
-                    <img class="img-responsive" src="assets/img/main/donate3.png">
-                </div>
-                <div class="col-md-6 positionfix">
-                    <div class="positionlow">
-                        <h2><strong>Everyday Life</strong></h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor arcu, sodales eu lacus
-                            vel,
-                            pulvinar dapibus odio. Aliquam aliquet consequat rutrum. Lorem ipsum dolor sit amet,
-                            consectetur
-                            adipiscing elit. Integer volutpat neque sed arcu efficitur volutpat. Ut eget dolor sit amet
-                            risus
-                            lacinia tempor. Pellentesque dictum blandit ante in lobortis. Nulla facilisi. Suspendisse
-                            aliquet
-                            a tortor sit amet sollicitudin. Sed cursus finibus risus, quis posuere purus semper quis.
-                            Vivamus non ex dapibus, pretium nulla at, iaculis arcu. Vivamus commodo purus eget diam
-                            luctus consequat.
-                        </p>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <!-- Donate Modal -->
@@ -140,8 +123,7 @@
 
                     <div class="modal-body">
                         <form action="assets/stripe/stripe.php" method="post" id="donate-form">
-                            <label><input type="radio" name="radio-donate" value="donate" checked="checked"> Donate Once </label>
-                            <label><input type="radio" name="radio-donate" value="subscribe"> Donate Monthly</label>
+                            <input type="hidden" name="donation-type" value="donation"/>
                             <div class="group">
                                 <label>
                                     <span>Name</span>
@@ -169,10 +151,10 @@
                             <div class="group">
                                 <label>
                                     <span>Amount</span>
-                                    <input name="donate-amount" class="field" placeholder="USD" type="number" min="1"/>
+                                    <input name="donate-amount" class="field" placeholder="USD" type="number"/>
                                 </label>
                             </div>
-                            <button>Submit Donation <i class="fa fa-lock" style="padding-left: 3px"></i></button>
+                            <button>Submit Donation</button>
 
                             <div class="outcome">
                                 <div class="error"></div>
@@ -182,6 +164,47 @@
                             </div>
                         </form>
 
+                        <!-- to display errors returned by createToken -->
+                        <!--                    <span class="payment-errors">--><?php //echo $error ?><!--</span>-->
+                        <!--                    <span class="payment-success">--><?php //echo $success ?><!--</span>-->
+                        <!--                    <form action="assets/stripe/stripe.php" method="post" id="payment-form">-->
+                        <!--                        <h1>Donate</h1><br>-->
+                        <!---->
+                        <!--                        <h4>Contact Information</h4>-->
+                        <!---->
+                        <!--                        <input type="text" placeholder="Full Name" id="customer_name"/>-->
+                        <!--                        <input type="text" placeholder="Address" id="address_line1"/>-->
+                        <!--                        <input type="text" placeholder="Postal Code" id="address_zip" style="width: 49%"/>-->
+                        <!--                        <input type="text" placeholder="City" id="address_city" style="width: 49%"/>-->
+                        <!--                        <input type="text" placeholder="Province" id="address_state" style="width: 49%"/>-->
+                        <!--                        <input type="text" placeholder="Country" id="address_country" style="width: 49%"/>-->
+                        <!--                        <input type="text" placeholder="Email" name="receiptEmail"/>-->
+                        <!---->
+                        <!--                        <h4>Card Details <i class="fa fa-lock" style="padding-left: 3px"></i></h4>-->
+                        <!---->
+                        <!---->
+                        <!--                        <div class="form-row">-->
+                        <!--                            <input type="text" size="20" autocomplete="off" placeholder="Card Number" id="card-number"/>-->
+                        <!--                        </div>-->
+                        <!--                        <div class="form-row">-->
+                        <!--                            <input type="text" size="4" autocomplete="off" placeholder="CVC" id="card-cvc"/>-->
+                        <!--                        </div>-->
+                        <!--                        <div class="form-row">-->
+                        <!--                            <input type="text" size="2" placeholder="Expiration - MM" id="card-expiry-month"-->
+                        <!--                                   style="width: 49%;"/>-->
+                        <!--                            <input type="text" size="4" placeholder="Expiration - YYYY" id="card-expiry-year"-->
+                        <!--                                   style="width: 49%;"/>-->
+                        <!--                        </div>-->
+                        <!--                        <div class="form-row">-->
+                        <!--                            <input type="text" name="amount" placeholder="Donation Amount ($)">-->
+                        <!--                        </div>-->
+                        <!--                        <!--<input type="submit" name="submitButton" class="donate donatemodal-submit submit" value="Donate">-->
+                        <!--                        <input type="submit" class="donate donatemodal-submit submit" id="submit-button"-->
+                        <!--                               value="Donate"/>-->
+                        <!-- -->
+                        <!--                        <p>Your card will be charged only once, with the donation amount specified above.</p>-->
+                        <!--                    </form>-->
+
                         <div class="donate-help">
                             <!--                    <a href="#">Help</a>-->
                         </div>
@@ -189,6 +212,51 @@
                 </div>
             </div>
         </div>
+
+        <!-- Sponsor a Child Modal -->
+        <!--    <div class="modal fade" id="sponsor-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">-->
+        <!--        <div class="modal-dialog">-->
+        <!--            <div class="donatemodal-container">-->
+        <!--                <div class="closeModal">-->
+        <!--                    <a data-toggle="modal" data-target="#sponsor-modal"><i class="fa fa-times" style="font-size: 16px"></i></a>-->
+        <!--                </div>-->
+        <!---->
+        <!--                <h1>Sponsor a Child</h1><br>-->
+        <!---->
+        <!--                <h4>Contact Information</h4>-->
+        <!---->
+        <!--                <form action="assets/stripe/stripe.php" method="POST" id="sponsor-form">-->
+        <!--                    <p class="payment-errors"></p>-->
+        <!---->
+        <!--                    <input type="hidden" name="type" value="sponsor">-->
+        <!--                    <input type="text" name="name"            placeholder="Full Name"    data-stripe="name">-->
+        <!--                    <input type="text" name="address_line1"   placeholder="Address"      data-stripe="address_line1">-->
+        <!--                    <input type="text" name="address_zip"     placeholder="Postal Code"  data-stripe="address_zip"  style="width: 49%">-->
+        <!--                    <input type="text" name="address_city"    placeholder="City"         data-stripe="address_city" style="width: 49%">-->
+        <!--                    <input type="text" name="address_state"   placeholder="Province"     data-stripe="address_state" style="width: 49%">-->
+        <!--                    <input type="text" name="address_country" placeholder="Country"      data-stripe="address_country" style="width: 49%">-->
+        <!--                    <input type="text" name="receipt_email"   placeholder="Email">-->
+        <!--                    <input type="text" name="receipt_number"  placeholder="Phone Number">-->
+        <!---->
+        <!--                    <h4>Card Details  <i class="fa fa-lock" style="padding-left: 3px"></i></h4>-->
+        <!---->
+        <!--                    <input type="text"   name="cardnumber"      placeholder="Card Number"       data-stripe="number">-->
+        <!--                    <input type="text"   name="exp_month"       placeholder="Expiration - MM"   data-stripe="exp_month" style="width: 49%;">-->
+        <!--                    <input type="text"   name="exp_year"        placeholder="Expiration - YY"   data-stripe="exp_year"  style="width: 49%;">-->
+        <!--                    <input type="text"   name="cvc"             placeholder="CVC"               data-stripe="cvc">-->
+        <!--                    <input type="text"   name="amount"          placeholder="Monthly Donation Amount ($)" >-->
+        <!--                    <input type="submit" name="submitButton" class="donate donatemodal-submit submit" value="Sponsor">-->
+        <!--                    <p>Your card will be charged monthly with the donation amount specified above. Please email us at-->
+        <!--                        example@example.com if you would like us to remove your card from the sponsors list.</p>-->
+        <!--                </form>-->
+        <!--                <span class="payment-errors"></span>-->
+        <!---->
+        <!--                <div class="donate-help">-->
+        <!--                    <!--                    <a href="#">Help</a>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--    </div>-->
 
         <script
                 src="https://code.jquery.com/jquery-3.1.1.slim.min.js"

@@ -58,7 +58,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="https://dollychildren.org/" class="navbar-brand navbar-left"><img src="assets/img/main/logo.png"></a>
+            <a href="https://dollychildren.org/" class="navbar-brand navbar-left"><img src="assets/img/main/header.png"></a>
 
         </div>
 
