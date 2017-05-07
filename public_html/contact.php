@@ -39,14 +39,16 @@ include_once("header.php");
                         <button class="btn btn-raised btn-primary btn-lg">Send</button>
                     </div>
                 </form>
+            </div>
+            <div class="row">
                 <p>
                     <b>Or find us here!</b><br><br>
                     <b>Address</b><br>
-                    Plot 20, Moshood Abiola Crescent, Off Toyin street, Ikeja Lagos, Nigeria<br><br>
+                    20 Moshood Abiola Crescent, Ikeja Lagos, Nigeria<br><br>
                     <b>Telephone</b><br>
                     (+234) 708-739-0017     (+234) 818-689-1611
                 </p>
-                <div id="google_map"></div>
+                <script src="//maps.google.com/maps/api/js?key=AIzaSyDB4HGFp5gVXh06rxNL7R9ypYZMI9261Pc&callback=loadedGmap" async defer></script>
             </div>
         </div>
     </div>

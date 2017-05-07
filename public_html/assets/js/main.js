@@ -83,7 +83,7 @@ $(document).ready(function () {
 /* Nob Google Map Start
  /* ----------------------------------------------------------- */
 function loadedGmap() {
-    if ($('body').hasClass("index-page")) {
+    if ($('body').hasClass("contact-page")) {
         // create a LatLng object containing the coordinate for the center of the map
         var latlng = new google.maps.LatLng(6.593691, 3.352847);
 
